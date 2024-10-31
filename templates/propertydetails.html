@@ -47,9 +47,8 @@ Property Details - Dreams Land Realty
 
       <!-- Right Column for Property Information -->
       <div class="col-md-4">
-        <div class="property-info bg-light p-4">
-          <h2 class="text-primary">INR 1.07 Cr</h2>
-          <p>Onwards</p>
+        <div class="property-info bg-light p-4" style="line-height: 35px;">
+          <h2 class="text-primary">INR 1.07 Cr</h2><p>Onwards</p>
           <button class="btn btn-warning btn-block mb-3" style="width: 100%;">Contact Seller</button>
           <p><strong>2 Bed + Modern Home </strong></p>
           <p><strong>Near Aalapuzha backwaters</strong></p>
@@ -57,8 +56,14 @@ Property Details - Dreams Land Realty
           <p>Carpet Area: <strong>1,133 - 2,251 Sq.ft</strong></p>
           <p>Min. Price per Sqft: <strong>INR 6.53K</strong></p>
           <p>Configurations: <strong>3 BHK, 4 BHK</strong></p>
-          <p class="text" style="line-height: 40px;">Description: <strong>This property offers a modern design with great amenities and a beautiful view. Perfect for families looking for comfort and style!</strong></p>
         </div>
+      </div>
+
+      <div class="text-center justify-content-center">
+        <br>
+        <br>
+        <h4 class="mb-4 text-left">Property Description</h4>
+        <p class="text bg-light" style="line-height: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Welcome to your dream home! This stunning property boasts a sleek, modern design that seamlessly blends comfort and style. With spacious living areas bathed in natural light, it’s perfect for family gatherings and everyday living. Enjoy top-of-the-line amenities, including a gourmet kitchen, luxurious bathrooms, and smart home features that enhance convenience. Step outside to a beautifully landscaped yard, ideal for outdoor activities or relaxing with a book. The breathtaking views provide a serene backdrop, making it a true retreat. This home is not just a place to live; it’s a lifestyle choice for families seeking elegance and comfort.</p>
       </div>
     </div>
   </div>
@@ -68,7 +73,7 @@ Property Details - Dreams Land Realty
     <div class="row">
       <div class="col-md-12">
         <h4 class="mb-4">Property Configurations & Details</h4>
-        <table class="table table-bordered table-responsive">
+        <table class="table table-bordered">
           <thead class="thead-light">
             <tr>
               <th>Configuration</th>
@@ -160,7 +165,7 @@ Property Details - Dreams Land Realty
     .property-title {
       font-size: 2rem;
       font-weight: 700;
-      color: #333;
+      color: rgb(20, 8, 89);
       margin-bottom: 5px;
     }
 
@@ -203,11 +208,15 @@ Property Details - Dreams Land Realty
         margin-bottom: 10px;
         margin: 0; /* Removed margin for mobile view to stack neatly */
         width: 100%;
+        object-fit: cover;
+        max-height: 300px;
+        max-width: 300px;
       }
 
       .main-image {
         max-height: 300px;
         object-fit: cover;
+        max-width: 300px;
       }
 
       .property-title {
@@ -219,8 +228,6 @@ Property Details - Dreams Land Realty
       }
     }
 
-    /* style.css */
-
 /* General Styles for the Table */
 .table {
     width: 100%; /* Ensure the table takes full width */
@@ -231,10 +238,6 @@ Property Details - Dreams Land Realty
 .table td {
     padding: 15px; /* Add padding for better readability */
     text-align: left; /* Align text to the left */
-}
-
-.table thead {
-    background-color: #f8f9fa; /* Light background for table header */
 }
 
 /* Mobile Responsive Styles */
@@ -259,5 +262,6 @@ Property Details - Dreams Land Realty
         font-size: 0.875rem; /* Keep body font size smaller */
     }
 }
+
   </style>
 {% endblock %}
