@@ -635,12 +635,12 @@ h4 {
 /* Mobile styles for small devices */
 @media (max-width: 375px) {
     h2 {
-        font-size: 24px;
+        font-size: 26px;
         color: rgb(20, 8, 89);
     }
 
     h4 {
-        font-size: 18px;
+        font-size: 20px;
         color: rgb(20, 8, 89);
     }
 
@@ -655,7 +655,7 @@ h4 {
     }
 
     .card-text {
-        font-size: 12px;
+        font-size: 15px;
         color: rgb(20, 8, 89);
     }
 
