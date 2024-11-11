@@ -900,9 +900,10 @@ h4 {
 
 /* Cards styling */
 .location-cards .card {
-    flex: 1 1 calc(33.33% - 10px);
+    flex: 1 1 33%; /* Ensures cards are equally spaced in rows */
+    max-width: calc(33.33% - 10px); /* To ensure the cards take equal space in the row */
     margin: 5px;
-    height: 100px;
+    height: 90px;
     overflow: hidden;
     border-radius: 10px;
     position: relative;
@@ -928,9 +929,10 @@ h4 {
     transform: scale(1.2);
 }
 
+/* Responsive layout for smaller screens */
 @media (max-width: 576px) {
     .location-cards .card {
-        flex: 1 1 100%;
+        flex: 1 1 100%; /* Cards take full width on small screens */
+        max-width: 100%;
     }
 }
-
