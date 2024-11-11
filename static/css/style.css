@@ -405,7 +405,7 @@ h4 {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 360px) {
+@media (max-width: 375px) {
 
     .image-container,
     .form-container {
@@ -503,7 +503,7 @@ h4 {
     }
 }
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
     .text-container {
         padding: 20px 10px;
         /* Adjust padding for small screens */
@@ -633,7 +633,7 @@ h4 {
 }
 
 /* Mobile styles for small devices */
-@media (max-width: 360px) {
+@media (max-width: 375px) {
     h2 {
         font-size: 24px;
         color: rgb(20, 8, 89);
