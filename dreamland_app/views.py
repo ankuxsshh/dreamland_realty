@@ -32,3 +32,26 @@ def globalreach(request):
 def agentsnetwork(request):
     return render(request,'agentsnetwork.html')
 
+LOCATIONS = {
+    "abu_dhabi": "Abu Dhabi",
+    "sharjah": "Sharjah",
+    "dubai": "Dubai",
+    "umm_al_quwain": "Umm Al Quwain",
+    "fujairah": "Fujairah",
+    "ajman": "Ajman",
+    "ras_al_khaimah": "Ras Al Khaimah",
+    "trivandrum": "Trivandrum",
+    "alappuzha": "Alappuzha",
+    "kottayam": "Kottayam",
+    "kochi": "Kochi",
+    "thrissur": "Thrissur",
+    "kozhikode": "Kozhikode",
+    "kannur": "Kannur",
+}
+
+def location_view(request, location_slug):
+    # Determine the location name from the slug
+    location_name = LOCATIONS.get(location_slug, "Location Not Found")
+    
+    # Pass the location name to the template
+    return render(request, 'locations.html', {'location': location_name})
