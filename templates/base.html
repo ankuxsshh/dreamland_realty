@@ -146,15 +146,17 @@
         document.getElementById('filter-overlay').classList.remove('active')
       })
       
-      // Display dynamic slider values
+      // Display dynamic slider values for Square Footage
       const sqftDisplay = document.getElementById('sqft-display')
       const minSqft = document.getElementById('min-sqft')
       const maxSqft = document.getElementById('max-sqft')
       
+      // Display dynamic slider values for Price
       const priceDisplay = document.getElementById('price-display')
       const minPrice = document.getElementById('min-price')
       const maxPrice = document.getElementById('max-price')
       
+      // Update square footage display on slider input change
       minSqft.addEventListener('input', () => {
         sqftDisplay.textContent = `${minSqft.value} - ${maxSqft.value} sqft`
       })
@@ -162,18 +164,19 @@
         sqftDisplay.textContent = `${minSqft.value} - ${maxSqft.value} sqft`
       })
       
+      // Update price display on slider input change
       minPrice.addEventListener('input', () => {
-        priceDisplay.textContent = `$${minPrice.value} - $${maxPrice.value}`
+        priceDisplay.textContent = `$${minPrice.value.toLocaleString()} - $${maxPrice.value.toLocaleString()}`
       })
       maxPrice.addEventListener('input', () => {
-        priceDisplay.textContent = `$${minPrice.value} - $${maxPrice.value}`
+        priceDisplay.textContent = `$${minPrice.value.toLocaleString()} - $${maxPrice.value.toLocaleString()}`
       })
       
       // Clear filters
       document.getElementById('clear-filter').addEventListener('click', () => {
         document.querySelector('form').reset()
         sqftDisplay.textContent = '500 - 5000 sqft'
-        priceDisplay.textContent = '$1,000 - $1,000,000'
+        priceDisplay.textContent = '$100,000 - $1,000,000'
       })
     </script>
 
