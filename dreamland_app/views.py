@@ -40,6 +40,7 @@ LOCATIONS = {
     "fujairah": "Fujairah",
     "ajman": "Ajman",
     "ras_al_khaimah": "Ras Al Khaimah",
+
     "trivandrum": "Trivandrum",
     "alappuzha": "Alappuzha",
     "kottayam": "Kottayam",
@@ -47,6 +48,22 @@ LOCATIONS = {
     "thrissur": "Thrissur",
     "kozhikode": "Kozhikode",
     "kannur": "Kannur",
+
+    "mumbai": "Mumbai",
+    "pune": "Pune",
+    "delhi": "Delhi",
+    "noida": "Noida",
+    "gurugram": "Gurugram",
+    "banglore": "Banglore",
+    "hyderabad": "Hyderabad",
+    "chennai": "Chennai",
+    "kolkata": "Kolkata",
+    "ahmedabad": "Ahmedabad",
+    "lucknow": "Lucknow",
+    "coimbatore": "Coimbatore",
+    "goa": "Goa",
+    "nagpur": "Nagpur",
+    "vancouver": "Vancouver",
 }
 
 def location_view(request, location_slug):
