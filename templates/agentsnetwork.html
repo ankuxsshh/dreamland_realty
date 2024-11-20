@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Agents Network - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+  <br />
+  <br />
+  <!-- Parallax Section -->
+  <div class="parallax-section">
+    <div class="parallax-content text-center text-white">
+      <h1 class="text-white">Agents Network</h1>
+      <p class="text-white">We're here to help you with all your real estate needs.</p>
+    </div>
+  </div>
+
+  <br />
+
+  <!-- Section about agents and real estate expertise -->
+  <div class="container text-center bg-light py-5">
+    <h2>Your Investment, Our Priority</h2>
+    <p class="content-text">We believe in the power of dreams and provide the roadmap to achieve them. Our robust team of over 250+ highly skilled professionals in Kerala is dedicated to providing expert guidance, with plans to expand nationwide by 2026.</p>
+    <p class="content-text">Our agents’ in-depth understanding of the real estate market sets them apart. They are the essence of local market expertise, providing unparalleled insights that ensure your investments are in the best hands.</p>
+    <p class="content-text">This ground-level expertise, combined with our commitment to protecting and growing your wealth, ensures a roadmap to turn your property dreams into reality. Whether you’re looking to buy, sell, or invest, our agents are dedicated to your success, making us your ideal real estate partner.</p>
+  </div>
+  <br />
+
+  <!-- Custom CSS for parallax effect and content layout -->
+  <style>
+    .parallax-section {
+      background-image: url('https://storage.googleapis.com/website-production/uploads/2023/04/agency-hierarchy.webp');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin: 5px;
+    }
+    
+    .parallax-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+    
+    .parallax-content {
+      z-index: 2;
+    }
+    
+    .parallax-content h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .parallax-content p {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .parallax-content h1 {
+        font-size: 2.5rem;
+      }
+    
+      .parallax-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+{% endblock %}

@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Global Reach - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+  <br />
+  <br />
+  <br />
+  <!-- Parallax Section -->
+  <div class="parallax-section">
+    <div class="parallax-content text-center text-white">
+      <h1 class="text-white">Our International Business Associates</h1>
+      <p class="text-white">We're here to help you with all your real estate needs.</p>
+    </div>
+  </div>
+
+  <!-- Main Content Section -->
+  <div class="container my-5">
+    <p>Since our inception in 2012, Dreams Land Realty has solidified its position as a prominent player in the Indian real estate market. Our strategic expansion to the United Arab Emirates, particularly Dubai, over the past five years has been instrumental in fostering strong global connections. Through our collaborations with a diverse network of esteemed builders, we have successfully reached major real estate markets in Oman, Qatar, Saudi Arabia, Bahrain, the UK, USA, and Australia, bridging the gap between clients and their ideal properties. Our in-depth understanding of global real estate markets, coupled with our commitment to client satisfaction, has enabled us to cultivate enduring relationships with clients from various other countries as well.</p>
+    <br />
+    <br />
+    <h2 class="text-center my-4">We are proud to collaborate with the following industry leaders</h2>
+
+    <!-- Infinite Scrolling Slider Section -->
+    <div class="bank-slider-wrapper">
+      <div class="bank-slider">
+        <div class="bank-slide">
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/emaar1.gif" alt="Bank Image 1" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/shoba.gif" alt="Bank Image 2" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/damac1.gif" alt="Bank Image 3" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/aldar.gif" alt="Bank Image 4" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/danube.gif" alt="Bank Image 5" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/ninga.gif" alt="Bank Image 6" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/leos.gif" alt="Bank Image 7" />
+          <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/tiger.gif" alt="Bank Image 8" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .bank-slider-wrapper {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .bank-slider {
+      display: flex;
+      animation: scroll-left 20s linear infinite;
+    }
+    
+    .bank-slide {
+      display: flex;
+    }
+    
+    .bank-slide img {
+      width: 300px; /* Adjust the width as needed */
+      height: 200px; /* Adjust the height as needed */
+      margin: 20px; /* Space between images */
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-5%);
+      }
+    }
+    
+    /* Media Queries for smaller screens */
+    @media (max-width: 768px) {
+      .bank-slide img {
+        width: 150px;
+        margin: 20px;
+        height: 150px;
+      }
+    }
+    .parallax-section {
+      background-image: url('https://img.freepik.com/free-photo/aerial-view-business-data-analysis-graph_53876-146152.jpg');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 67vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin: 5px;
+    }
+    
+    .parallax-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+    
+    .parallax-content {
+      z-index: 2;
+    }
+    
+    .parallax-content h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .parallax-content p {
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .parallax-content h1 {
+        font-size: 2.5rem;
+      }
+    
+      .parallax-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+{% endblock %}

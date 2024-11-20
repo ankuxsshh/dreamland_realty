@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Contact Us - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+  <!-- Parallax Section -->
+  <div class="parallax-section">
+    <div class="parallax-content text-center text-white">
+      <h1 class="text-white">Contact Us</h1>
+      <p class="text-white">We're here to help you with all your real estate needs.</p>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <!-- Left Container -->
+      <div class="col-md-6 d-flex flex-column justify-content-center align-items-center" style="background-color: #e0e0e0; height: 500px; padding: 30px;">
+        <h2 class="text-center" style="color: rgb(20, 8, 89);">Get in Touch</h2>
+        <p class="text-center">Fill out the form below, and our team will get back to you shortly!</p>
+        <p class="text-center">Whether you have questions about our services or need assistance, we're here to help.</p>
+      </div>
+      
+      <!-- Right Container -->
+      <div class="col-md-6 bg-light">
+        <form action="#" method="post">
+          <h2 class="text-center" style="color: rgb(20, 8, 89);">Contact Form</h2>
+          <div class="mb-1">
+            <label for="name" class="form-label"></label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="mb-1">
+            <label for="email" class="form-label"></label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="mb-1">
+            <label for="message" class="form-label"></label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message here" required></textarea>
+          </div>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- Contact and Address Section -->
+<div class="container mt-5">
+    <div class="row justify-content-around text-center">
+      <!-- Contact Section -->
+      <div class="col-md-5">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+          <!-- Icon Circle -->
+          <div class="icon-circle d-flex justify-content-center align-items-center me-3">
+            <i class="fa-regular fa-address-book fa-2x"></i>
+          </div>
+          <!-- Contact Heading -->
+          <h2 class="mb-0">Contact</h2>
+        </div>
+        <p>info@dreamslandrealty.com</p>
+        <p>+91 8891094916</p>
+        <p>+91 6238061066</p>
+      </div>
+  
+      <!-- Address Section -->
+      <div class="col-md-5">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+          <!-- Icon Circle -->
+          <div class="icon-circle d-flex justify-content-center align-items-center me-3">
+            <i class="fa-solid fa-house fa-2x"></i>
+          </div>
+          <!-- Address Heading -->
+          <h2 class="mb-0">Address</h2>
+        </div>
+        <p>Thottathil House, Kanjoor Parappuram 683575</p>
+        <p>Ernakulam District, Kerala, India</p>
+      </div>
+    </div>
+  </div>
+  
+  <style>
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background-color: #f0f0f0;
+      border-radius: 50%;
+    }
+    .icon-circle i {
+      color: #140859;
+    }
+    h2 {
+      color: rgb(20, 8, 89);
+    }
+    .button {
+      width: 100%;
+    }
+    .parallax-section {
+      background-image: url("https://cdn.prod.website-files.com/65cfc8641cecc667c97dc5dc/661d49dd4fa72f3790ba9177_contactus.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin: 5px;
+  }
+  
+  .parallax-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+  }
+  
+  .parallax-content {
+      z-index: 2;
+  }
+  
+  .parallax-content h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+  }
+  
+  .parallax-content p {
+      font-size: 1.25rem;
+      font-weight: 300;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .parallax-content h1 {
+          font-size: 2.5rem;
+      }
+  
+      .parallax-content p {
+          font-size: 1rem;
+      }
+  }
+  .form-control {
+    border-radius: 10px;
+  }
+  </style>  
+{% endblock %}

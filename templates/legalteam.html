@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Our Legal Team - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+<br>
+  <!-- Parallax Section -->
+  <div class="parallax-section">
+    <div class="parallax-content text-center text-white">
+      <h1 class="text-white">Our Legal Team</h1>
+      <p class="text-white">We're here to help you with all your real estate needs.</p>
+    </div>
+  </div>
+
+  <!-- Two-column layout with Bootstrap -->
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Left container (Text) -->
+      <div class="col-md-6 d-flex align-items-center bg-light">
+        <div>
+          <h2>Meet Our Expert Legal Team</h2>
+          <p>At Dreams Land Realty, we understand that real estate transactions involve complex legal aspects. To ensure a seamless and secure process for our clients, we have assembled a dedicated legal team led by Mrs. Shilpa Vimal, BA,LL.B,LL.M.</p>
+          <p>Our team comprises a panel of 25 experienced advocates who are well-versed in real estate laws, tax laws, property rights, and regulatory compliance. We are committed to providing comprehensive legal support throughout the entire property buying and selling journey. With our experienced legal team by your side, you can have complete peace of mind throughout your real estate transaction. Our panel of advocates also offers cost-effective property documentation solutions.</p>
+        </div>
+      </div>
+
+      <!-- Right container (Image) -->
+      <div class="col-md-6">
+        <img src="https://media.istockphoto.com/id/1183175189/photo/lawyer-are-currently-providing-legal-advice-to-clients-legal-planning.jpg?s=612x612&w=0&k=20&c=GyOX5-d01W1RebuWYexuSm0kT0T5KAdmL3cjSva1oNw=" class="img-fluid" alt="Legal Team Image" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="container-wrapper">
+      <div class="left-container">
+        <p11>“Our team doesn’t just offer legal advice; we provide tailored solutions. By thoroughly understanding your unique background, we ensure that your property interests are not just protected, but fortified. We’re here to make complex legal matters simple and secure for you.”</p11>
+        <br />
+        <p12>- Mrs. Shilpa Vimal</p12>
+        <p13>
+          <b>(B.A.LLB, LL.M) – Legal Head, Dream Land Realty</b>
+        </p13>
+      </div>
+      <div class="right-container">
+        <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/l-team.gif" alt="CEO Image" />
+      </div>
+    </div>
+  </div>
+
+<style>
+    .left-container {
+        width: 950px;
+        height: 250px;
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column; /* Stack content in a column */
+        text-align: left; /* Center text */
+        padding: 20px;
+    }
+
+    .left-container p {
+        margin: 0; /* Remove default margin to avoid extra space between paragraphs */
+    }
+
+    /* Styling for each paragraph (optional, for appearance) */
+    p11 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    p12 {
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+
+    p13 {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .right-container {
+        width: 100px;
+        height: 250px; /* Set the height to match the left container */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right-container img {
+        height: 100%; /* Ensure the image fills the container's height */
+        width: auto;  /* Maintain the aspect ratio */
+        object-fit: cover; /* Cover ensures the image fills the container */
+    }
+
+    /* Ensure proper spacing */
+    .container-wrapper {
+        display: flex;
+        gap: 70px; /* Adjust spacing between containers if needed */
+        margin: 20px;
+    }
+
+    .parallax-section {
+        background-image: url("https://us.123rf.com/450wm/dookdui/dookdui2309/dookdui230900997/214345723-lawyers-provide-legal-advice-clients-who-are-being-prosecuted-by-other-parties-receive-counseling-to.jpg?ver=6");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 67vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin: 5px;
+    }
+
+    .parallax-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+    .parallax-content {
+        z-index: 2;
+    }
+
+    .parallax-content h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .parallax-content p {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .parallax-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .parallax-content p {
+            font-size: 1rem;
+        }
+    }
+
+    /* Mobile-specific styles */
+    @media (max-width: 375px) {
+        .left-container {
+            width: 100%; /* Full width for mobile */
+            height: auto; /* Allow height to be dynamic */
+            padding: 10px; /* Reduced padding for smaller screens */
+        }
+
+        p11 {
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+
+        p12 {
+            font-size: 0.9rem; /* Smaller font size for mobile */
+        }
+
+        p13 {
+            font-size: 1rem; /* Smaller font size for mobile */
+        }
+
+        .right-container {
+            width: 100%; /* Set the width to 100% for mobile */
+            height: auto; /* Allow height to be dynamic */
+        }
+
+        /* Ensure the GIF image is responsive */
+        .right-container img {
+            width: 100%; /* Make the GIF image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        /* Adjust the image size in the left container */
+        .left-container img {
+            width: 100%; /* Make the image responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .container-wrapper {
+            flex-direction: column; /* Stack containers vertically */
+            gap: 10px; /* Reduced gap for mobile */
+            margin: 10px; /* Reduced margin for mobile */
+        }
+
+        .parallax-section {
+            height: 50vh; /* Adjust height for mobile */
+        }
+
+        .parallax-content h1 {
+            font-size: 2rem; /* Adjust font size for mobile */
+        }
+
+        .parallax-content p {
+            font-size: 1rem; /* Adjust font size for mobile */
+        }
+    }
+</style>
+
+{% endblock %}
