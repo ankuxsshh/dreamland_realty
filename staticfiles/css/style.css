@@ -537,76 +537,6 @@ h4 {
     }
 }
 
-#DEVELOPER-SLIDERS .bank-slider-heading {
-    font-size: 35px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.bank-slider-wrapper {
-    display: flex;
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.bank-slide {
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    animation: slide 20s linear infinite;
-}
-
-.bank-container {
-    margin: 10px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 1s;
-    height: 250px;
-    /* Set a fixed height for the container */
-}
-
-.bank-container img {
-    object-fit: cover;
-    /* Maintain aspect ratio */
-}
-
-.bank-container:hover {
-    transform: scale(1.1);
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-.row.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.col-md-4 {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.card {
-    border: none;
-    padding: 10px;
-}
-
-.card-img-top {
-    height: 250px;
-    /* Set fixed height for card images */
-    width: 100%;
-    object-fit: cover;
-    /* Maintain aspect ratio */
-}
-
 #TESTIMONIALS
 
 /* Profile picture styles */
@@ -924,8 +854,10 @@ h4 {
 
 /* Cards styling */
 .location-cards .card {
-    flex: 1 1 33%; /* Ensures cards are equally spaced in rows */
-    max-width: calc(33.33% - 10px); /* To ensure the cards take equal space in the row */
+    flex: 1 1 33%;
+    /* Ensures cards are equally spaced in rows */
+    max-width: calc(33.33% - 10px);
+    /* To ensure the cards take equal space in the row */
     margin: 5px;
     height: 90px;
     overflow: hidden;
@@ -947,7 +879,8 @@ h4 {
     height: 100%;
     background-size: cover;
     transform: scale(1.2);
-    transition: transform 0.3s ease; /* For smooth zoom effect */
+    transition: transform 0.3s ease;
+    /* For smooth zoom effect */
 }
 
 /* Dark overlay with opacity on the image */
@@ -957,8 +890,10 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Dark overlay with opacity */
-    z-index: 1; /* Make sure the overlay is above the image */
+    background: rgba(0, 0, 0, 0.3);
+    /* Dark overlay with opacity */
+    z-index: 1;
+    /* Make sure the overlay is above the image */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -969,18 +904,21 @@ h4 {
     font-size: 1.2rem;
     font-weight: bold;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Optional: enhances text visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* Optional: enhances text visibility */
 }
 
 /* Zoom-in effect on hover */
 .card:hover .card-img {
-    transform: scale(1.2); /* Zoom effect */
+    transform: scale(1.2);
+    /* Zoom effect */
 }
 
 /* Responsive layout for smaller screens */
 @media (max-width: 576px) {
     .location-cards .card {
-        flex: 1 1 100%; /* Cards take full width on small screens */
+        flex: 1 1 100%;
+        /* Cards take full width on small screens */
         max-width: 100%;
     }
 }

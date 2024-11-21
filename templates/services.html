@@ -5,8 +5,8 @@
 {% endblock %}
 
 {% block content %}
-<br>
-<br>
+  <br />
+  <br />
   <!-- Parallax Section -->
   <div class="parallax-section">
     <div class="parallax-content text-center text-white">
@@ -193,7 +193,7 @@
   </div> {% endcomment %}
   <style>
     .parallax-section {
-      background-image: url("https://datanetstracon.org/assets/img/it_support.jpg");
+      background-image: url('https://datanetstracon.org/assets/img/it_support.jpg');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -205,10 +205,10 @@
       position: relative;
       z-index: 1;
       margin: 5px;
-  }
-  
-  .parallax-section::before {
-      content: "";
+    }
+    
+    .parallax-section::before {
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -216,32 +216,32 @@
       bottom: 0;
       background: rgba(0, 0, 0, 0.3);
       z-index: -1;
-  }
-  
-  .parallax-content {
+    }
+    
+    .parallax-content {
       z-index: 2;
-  }
-  
-  .parallax-content h1 {
+    }
+    
+    .parallax-content h1 {
       font-size: 3rem;
       font-weight: 600;
       margin-bottom: 1rem;
-  }
-  
-  .parallax-content p {
+    }
+    
+    .parallax-content p {
       font-size: 1.25rem;
       font-weight: 300;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
       .parallax-content h1 {
-          font-size: 2.5rem;
+        font-size: 2.5rem;
       }
-  
+    
       .parallax-content p {
-          font-size: 1rem;
+        font-size: 1rem;
       }
-  }
+    }
   </style>
 {% endblock %}

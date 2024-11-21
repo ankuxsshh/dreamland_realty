@@ -5,9 +5,9 @@
 {% endblock %}
 
 {% block content %}
-<br>
-<br>
-<br>
+  <br />
+  <br />
+  <br />
   <!-- Parallax Section -->
   <div class="parallax-section">
     <div class="parallax-content text-center text-white">
@@ -50,166 +50,165 @@
     </div>
   </div>
 
-<style>
+  <style>
     .left-container {
-        width: 950px;
-        height: 250px;
-        background-color: #f8f9fa;
-        display: flex;
-        flex-direction: column; /* Stack content in a column */
-        text-align: left; /* Center text */
-        padding: 20px;
+      width: 950px;
+      height: 250px;
+      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column; /* Stack content in a column */
+      text-align: left; /* Center text */
+      padding: 20px;
     }
-
+    
     .left-container p {
-        margin: 0; /* Remove default margin to avoid extra space between paragraphs */
+      margin: 0; /* Remove default margin to avoid extra space between paragraphs */
     }
-
+    
     /* Styling for each paragraph (optional, for appearance) */
     p11 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
     }
-
+    
     p12 {
-        font-size: 1rem;
-        font-style: italic;
-        margin-bottom: 5px;
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 5px;
     }
-
+    
     p13 {
-        font-size: 1.1rem;
-        font-weight: bold;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
-
+    
     .right-container {
-        width: 100px;
-        height: 250px; /* Set the height to match the left container */
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      width: 100px;
+      height: 250px; /* Set the height to match the left container */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-
+    
     .right-container img {
-        height: 100%; /* Ensure the image fills the container's height */
-        width: auto;  /* Maintain the aspect ratio */
-        object-fit: cover; /* Cover ensures the image fills the container */
+      height: 100%; /* Ensure the image fills the container's height */
+      width: auto; /* Maintain the aspect ratio */
+      object-fit: cover; /* Cover ensures the image fills the container */
     }
-
+    
     /* Ensure proper spacing */
     .container-wrapper {
-        display: flex;
-        gap: 70px; /* Adjust spacing between containers if needed */
-        margin: 20px;
+      display: flex;
+      gap: 70px; /* Adjust spacing between containers if needed */
+      margin: 20px;
     }
-
+    
     .parallax-section {
-        background-image: url("https://us.123rf.com/450wm/dookdui/dookdui2309/dookdui230900997/214345723-lawyers-provide-legal-advice-clients-who-are-being-prosecuted-by-other-parties-receive-counseling-to.jpg?ver=6");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 67vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        z-index: 1;
-        margin: 5px;
+      background-image: url('https://us.123rf.com/450wm/dookdui/dookdui2309/dookdui230900997/214345723-lawyers-provide-legal-advice-clients-who-are-being-prosecuted-by-other-parties-receive-counseling-to.jpg?ver=6');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 67vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      margin: 5px;
     }
-
+    
     .parallax-section::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
-        z-index: -1;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
     }
-
+    
     .parallax-content {
-        z-index: 2;
+      z-index: 2;
     }
-
+    
     .parallax-content h1 {
-        font-size: 3rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
-
+    
     .parallax-content p {
-        font-size: 1.25rem;
-        font-weight: 300;
+      font-size: 1.25rem;
+      font-weight: 300;
     }
-
+    
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .parallax-content h1 {
-            font-size: 2.5rem;
-        }
-
-        .parallax-content p {
-            font-size: 1rem;
-        }
+      .parallax-content h1 {
+        font-size: 2.5rem;
+      }
+    
+      .parallax-content p {
+        font-size: 1rem;
+      }
     }
-
+    
     /* Mobile-specific styles */
     @media (max-width: 375px) {
-        .left-container {
-            width: 100%; /* Full width for mobile */
-            height: auto; /* Allow height to be dynamic */
-            padding: 10px; /* Reduced padding for smaller screens */
-        }
-
-        p11 {
-            font-size: 1rem; /* Smaller font size for mobile */
-        }
-
-        p12 {
-            font-size: 0.9rem; /* Smaller font size for mobile */
-        }
-
-        p13 {
-            font-size: 1rem; /* Smaller font size for mobile */
-        }
-
-        .right-container {
-            width: 100%; /* Set the width to 100% for mobile */
-            height: auto; /* Allow height to be dynamic */
-        }
-
-        /* Ensure the GIF image is responsive */
-        .right-container img {
-            width: 100%; /* Make the GIF image responsive */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        /* Adjust the image size in the left container */
-        .left-container img {
-            width: 100%; /* Make the image responsive */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .container-wrapper {
-            flex-direction: column; /* Stack containers vertically */
-            gap: 10px; /* Reduced gap for mobile */
-            margin: 10px; /* Reduced margin for mobile */
-        }
-
-        .parallax-section {
-            height: 50vh; /* Adjust height for mobile */
-        }
-
-        .parallax-content h1 {
-            font-size: 2rem; /* Adjust font size for mobile */
-        }
-
-        .parallax-content p {
-            font-size: 1rem; /* Adjust font size for mobile */
-        }
+      .left-container {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Allow height to be dynamic */
+        padding: 10px; /* Reduced padding for smaller screens */
+      }
+    
+      p11 {
+        font-size: 1rem; /* Smaller font size for mobile */
+      }
+    
+      p12 {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+      }
+    
+      p13 {
+        font-size: 1rem; /* Smaller font size for mobile */
+      }
+    
+      .right-container {
+        width: 100%; /* Set the width to 100% for mobile */
+        height: auto; /* Allow height to be dynamic */
+      }
+    
+      /* Ensure the GIF image is responsive */
+      .right-container img {
+        width: 100%; /* Make the GIF image responsive */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      /* Adjust the image size in the left container */
+      .left-container img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      .container-wrapper {
+        flex-direction: column; /* Stack containers vertically */
+        gap: 10px; /* Reduced gap for mobile */
+        margin: 10px; /* Reduced margin for mobile */
+      }
+    
+      .parallax-section {
+        height: 50vh; /* Adjust height for mobile */
+      }
+    
+      .parallax-content h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+      }
+    
+      .parallax-content p {
+        font-size: 1rem; /* Adjust font size for mobile */
+      }
     }
-</style>
-
+  </style>
 {% endblock %}

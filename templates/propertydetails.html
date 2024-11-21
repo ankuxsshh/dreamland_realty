@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Property Details - Dreams Land Realty
+  Property Details - Dreams Land Realty
 {% endblock %}
 
 {% block content %}
@@ -51,26 +51,38 @@ Property Details - Dreams Land Realty
         <div class="property-info bg-light p-4" style="line-height: 35px;">
           <h2 class="text-primary">INR 1.07 Cr</h2><p>Onwards</p>
           <button class="btn btn-warning btn-block mb-3" style="width: 100%;">Contact Seller</button>
-          <p><strong>2 Bed + Modern Home </strong></p>
-          <p><strong>Near Aalapuzha backwaters</strong></p>
-          <p>Possession Date: <strong>Dec 2028</strong></p>
-          <p>Carpet Area: <strong>1,133 - 2,251 Sq.ft</strong></p>
-          <p>Min. Price per Sqft: <strong>INR 6.53K</strong></p>
-          <p>Configurations: <strong>3 BHK, 4 BHK</strong></p>
+          <p>
+            <strong>2 Bed + Modern Home</strong>
+          </p>
+          <p>
+            <strong>Near Aalapuzha backwaters</strong>
+          </p>
+          <p>
+            Possession Date: <strong>Dec 2028</strong>
+          </p>
+          <p>
+            Carpet Area: <strong>1,133 - 2,251 Sq.ft</strong>
+          </p>
+          <p>
+            Min. Price per Sqft: <strong>INR 6.53K</strong>
+          </p>
+          <p>
+            Configurations: <strong>3 BHK, 4 BHK</strong>
+          </p>
         </div>
       </div>
 
       <div class="text-center justify-content-center">
-        <br>
-        <br>
+        <br />
+        <br />
         <h4 class="mb-4 text-left">Property Description</h4>
         <p class="text bg-light" style="line-height: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Welcome to your dream home! This stunning property boasts a sleek, modern design that seamlessly blends comfort and style. With spacious living areas bathed in natural light, it’s perfect for family gatherings and everyday living. Enjoy top-of-the-line amenities, including a gourmet kitchen, luxurious bathrooms, and smart home features that enhance convenience. Step outside to a beautifully landscaped yard, ideal for outdoor activities or relaxing with a book. The breathtaking views provide a serene backdrop, making it a true retreat. This home is not just a place to live; it’s a lifestyle choice for families seeking elegance and comfort.</p>
       </div>
     </div>
   </div>
 
-<!-- Detailed Information Section -->
-<div class="container my-5">
+  <!-- Detailed Information Section -->
+  <div class="container my-5">
     <div class="row">
       <div class="col-md-12">
         <h4 class="mb-4">Property Configurations & Details</h4>
@@ -101,11 +113,11 @@ Property Details - Dreams Land Realty
       </div>
     </div>
   </div>
-  
+
   <style>
     /* Base styles for parallax section */
     .parallax-section {
-      background-image: url("https://gulfbusiness.com/wp-content/uploads/2023/06/dubai-top-10-GettyImages-1370652706-1.jpg");
+      background-image: url('https://gulfbusiness.com/wp-content/uploads/2023/06/dubai-top-10-GettyImages-1370652706-1.jpg');
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
@@ -118,9 +130,9 @@ Property Details - Dreams Land Realty
       z-index: 1;
       margin: 5px;
     }
-
+    
     .parallax-section::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -129,32 +141,32 @@ Property Details - Dreams Land Realty
       background: rgba(0, 0, 0, 0.3);
       z-index: -1;
     }
-
+    
     .parallax-content {
       z-index: 2;
     }
-
+    
     .parallax-content h1 {
       font-size: 3rem;
       font-weight: 600;
       margin-bottom: 1rem;
     }
-
+    
     .parallax-content p {
       font-size: 1.25rem;
       font-weight: 300;
     }
-
+    
     .property-info {
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       min-height: 100%;
     }
-
+    
     .gallery-image {
       padding: 0;
     }
-
+    
     .img-gallery {
       object-fit: cover;
       height: 90%;
@@ -162,49 +174,49 @@ Property Details - Dreams Land Realty
       min-height: 170px;
       padding: 10px;
     }
-
+    
     .property-title {
       font-size: 2rem;
       font-weight: 700;
       color: rgb(20, 8, 89);
       margin-bottom: 5px;
     }
-
+    
     .property-location {
       font-size: 1.2rem;
       color: #555;
     }
-
+    
     /* Mobile Responsive Styles */
     @media (max-width: 768px) {
       .parallax-content h1 {
         font-size: 2.5rem;
       }
-
+    
       .parallax-content p {
         font-size: 1rem;
       }
     }
-
+    
     /* Mobile Responsive Styles */
     @media (max-width: 375px) {
       .property-info h2 {
         font-size: 1.5rem;
       }
-
+    
       .property-info p,
       .parallax-content p {
         font-size: 0.875rem;
       }
-
+    
       .property-info button {
         font-size: 0.875rem;
       }
-
+    
       .parallax-content h1 {
         font-size: 2rem;
       }
-
+    
       .gallery-image {
         margin-bottom: 10px;
         margin: 0; /* Removed margin for mobile view to stack neatly */
@@ -213,56 +225,55 @@ Property Details - Dreams Land Realty
         max-height: 300px;
         max-width: 300px;
       }
-
+    
       .main-image {
         max-height: 300px;
         object-fit: cover;
         max-width: 300px;
       }
-
+    
       .property-title {
         font-size: 1.75rem;
       }
-
+    
       .property-location {
         font-size: 1rem;
       }
     }
-
-/* General Styles for the Table */
-.table {
-    width: 100%; /* Ensure the table takes full width */
-    border-collapse: collapse; /* Ensures no gaps between borders */
-}
-
-.table th,
-.table td {
-    padding: 15px; /* Add padding for better readability */
-    text-align: left; /* Align text to the left */
-}
-
-/* Mobile Responsive Styles */
-@media (max-width: 375px) {
+    
+    /* General Styles for the Table */
     .table {
+      width: 100%; /* Ensure the table takes full width */
+      border-collapse: collapse; /* Ensures no gaps between borders */
+    }
+    
+    .table th,
+    .table td {
+      padding: 15px; /* Add padding for better readability */
+      text-align: left; /* Align text to the left */
+    }
+    
+    /* Mobile Responsive Styles */
+    @media (max-width: 375px) {
+      .table {
         font-size: 0.875rem; /* Adjust font size for smaller screens */
         display: block; /* Allow scrolling */
         overflow-x: auto; /* Enable horizontal scrolling */
         white-space: nowrap; /* Prevent text wrapping */
-    }
-
-    .table th,
-    .table td {
+      }
+    
+      .table th,
+      .table td {
         padding: 10px; /* Reduce padding for smaller screens */
-    }
-
-    .table th {
+      }
+    
+      .table th {
         font-size: 1rem; /* Slightly increase header font size */
-    }
-
-    .table td {
+      }
+    
+      .table td {
         font-size: 0.875rem; /* Keep body font size smaller */
+      }
     }
-}
-
   </style>
 {% endblock %}
