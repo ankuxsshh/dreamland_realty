@@ -199,17 +199,17 @@ footer {
     /* Border radius for the card */
     overflow: hidden;
     /* Ensures child elements respect the border radius */
-    height: 200px;
+    height: 150px;
     /* Fixed height for cards */
     display: flex;
     flex-direction: column;
     /* Aligns content vertically */
-    margin: 20px;
     position: relative;
     /* For positioning the description container */
     transition: transform 0.3s;
     /* Smooth transform effect on hover */
     border: 1px rgb(20, 8, 89);
+    margin: 10px;
 }
 
 .card:hover {
@@ -279,11 +279,11 @@ h4 {
     /* Align at the bottom of the card */
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.738);
-    /* White background */
+    background-color: rgba(0, 0, 0, 0.634);
+    /* Black background */
     padding: 1rem;
     /* Padding for description */
-    color: rgb(20, 8, 89);
+    color: rgb(255, 255, 255);
     border: 1px rgb(20, 8, 89);
     height: 200px;
     border-radius: 10px;
@@ -293,14 +293,14 @@ h4 {
 .card:hover .description-container {
     display: block;
     /* Show description on hover */
-    color: rgb(20, 8, 89);
+    color: rgb(255, 255, 255);
     height: 200px;
     border-radius: 10px;
     margin: 10px;
 }
 
 /* Mobile responsive styles */
-@media (max-width: 768px) {
+@media (max-width: 360px) {
     .row {
         flex-direction: column;
         /* Stacks cards vertically on small screens */
@@ -342,10 +342,11 @@ h4 {
         bottom: 30px;
         height: 130px;
         border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.634);
         /* Border radius for the card */
         overflow: hidden;
         /* Start hidden above the card */
-        color: rgb(20, 8, 89);
+        color: rgb(255, 255, 255);
         margin: 5px;
     }
 
@@ -356,7 +357,7 @@ h4 {
         /* Border radius for the card */
         overflow: hidden;
         /* Slide up to be visible on hover */
-        color: rgb(20, 8, 89);
+        color: rgb(255, 255, 255);
         margin: 5px;
     }
 }
@@ -559,7 +560,7 @@ h4 {
     margin: 10px;
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s;
+    transition: transform 1s;
     height: 250px;
     /* Set a fixed height for the container */
 }
@@ -854,8 +855,27 @@ h4 {
     transition: backdrop-filter 0.5s ease-in-out;
 }
 
-/* Hidden container by default */
-.location-container, .filter-container {
+/* General Overlay Styling */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Location Overlay Specific */
+.location-overlay .location-container {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -873,29 +893,32 @@ h4 {
     padding: 20px;
 }
 
-/* Show container with animation */
-.location-container.active, 
-.filter-container.active {
+.location-overlay .location-container.active {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
 
-/* Overlay effect */
-.overlay {
+/* Filter Overlay Specific */
+.filter-overlay .filter-container {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: white;
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1040;
-    visibility: hidden;
+    max-width: 800px;
+    height: 380px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0;
-    transition: opacity 0.4s ease, visibility 0.4s ease;
+    overflow-y: auto;
+    padding: 20px;
 }
 
-.overlay.active {
-    visibility: visible;
+.filter-overlay .filter-container.active {
+    transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
 
