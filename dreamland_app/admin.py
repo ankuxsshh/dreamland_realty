@@ -35,7 +35,7 @@ class ConfigurationInline(admin.TabularInline):
 # Custom Admin class for Property
 class PropertyAdmin(admin.ModelAdmin):
     form = PropertyAdminForm
-    list_display = ('property_name', 'property_location', 'bedrooms', 'square_feet', 'possession_date', 'property_status', 'property_type', 'property_subtype')
+    list_display = ('property_name', 'property_location', 'bhk', 'square_feet', 'possession_date', 'property_status', 'property_type', 'property_subtype')
     list_filter = ('property_status', 'property_type', 'property_subtype')
     search_fields = ('property_name', 'property_location', 'property_type', 'property_subtype')
     inlines = [ConfigurationInline]

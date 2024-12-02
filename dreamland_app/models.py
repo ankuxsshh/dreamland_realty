@@ -31,7 +31,7 @@ class Property(models.Model):
 
     property_name = models.CharField(max_length=255)
     property_location = models.CharField(max_length=255)
-    bedrooms = models.IntegerField()
+    bhk = models.IntegerField()
     square_feet = models.IntegerField()
     possession_date = models.DateField()
     property_status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='available')
