@@ -226,6 +226,8 @@ footer {
     object-fit: cover;
     /* Ensures images cover the area */
     border-radius: 10px;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .container {
@@ -233,6 +235,7 @@ footer {
     /* Padding inside the card */
     flex-grow: 1;
     /* Allows the container to fill remaining space */
+    
 }
 
 .info-row {
@@ -294,7 +297,7 @@ h4 {
     display: block;
     /* Show description on hover */
     color: rgb(255, 255, 255);
-    height: 200px;
+    height: 180px;
     border-radius: 10px;
     margin: 10px;
 }
