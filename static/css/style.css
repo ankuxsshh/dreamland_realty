@@ -96,7 +96,6 @@
 }
 
 .navbar-toggler {
-    border: none;
     color: rgb(20, 8, 89);
 }
 
@@ -235,7 +234,7 @@ footer {
     /* Padding inside the card */
     flex-grow: 1;
     /* Allows the container to fill remaining space */
-    
+
 }
 
 .info-row {
@@ -303,7 +302,7 @@ h4 {
 }
 
 /* Mobile responsive styles */
-@media (max-width: 360px) {
+@media (max-width: 355px) {
     .row {
         flex-direction: column;
         /* Stacks cards vertically on small screens */
@@ -409,7 +408,7 @@ h4 {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 375px) {
+@media (max-width: 355px) {
 
     .image-container,
     .form-container {
@@ -507,7 +506,7 @@ h4 {
     }
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 355px) {
     .text-container {
         padding: 20px 10px;
         /* Adjust padding for small screens */
@@ -567,7 +566,7 @@ h4 {
 }
 
 /* Mobile styles for small devices */
-@media (max-width: 375px) {
+@media (max-width: 355px) {
     h2 {
         font-size: 26px;
         color: rgb(20, 8, 89);
@@ -924,4 +923,14 @@ h4 {
         /* Cards take full width on small screens */
         max-width: 100%;
     }
+}
+
+/* Smooth scrolling for all browsers */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+    display: none;
 }

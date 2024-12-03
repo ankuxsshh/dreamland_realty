@@ -471,9 +471,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: green;">Available</p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
                 </div>
               </div>
               <br>
@@ -519,9 +519,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: red;">Sold</p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
                 </div>
               </div>
               <br>
@@ -567,9 +567,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: green;">Available</p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
                 </div>
               </div>
               <br>
@@ -618,9 +618,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: red;">Sold</p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
                 </div>
               </div>
               <br>
@@ -666,9 +666,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: green;">Available</p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
                 </div>
               </div>
               <br>
@@ -714,9 +714,9 @@
                 </div>
                 <div class="col">
                   <p class="p12">
-                    <b>Status</b>
+                    Status
                   </p>
-                  <p class="p12" style="color: red;">Sold</p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
                 </div>
               </div>
               <br>
@@ -783,7 +783,7 @@
   </div>
 
   <div class="container mt-5">
-    <h2 class="title-main text-center mb-4" style="color:  rgb(20, 8, 89);">Explore Our Features</h2>
+    <h2 class="title-main text-center mb-4" style="color:  #0a032f;">Explore Our Features</h2>
     <div class="row justify-content-center">
       <!-- Property Shot Card 1 -->
       <div class="col-md-4 mb-4">
@@ -832,7 +832,7 @@
 
 <section>
   <div class="container-fluid">
-<h2 class="text-center" style="color: rgb(20, 8, 89); font-size: 38px; "><b>Associated Builders</b></h2>
+<h2 class="text-center" style="color: #0a032f; font-size: 38px; "><b>Associated Builders</b></h2>
     <div class="col-12">
       <div class="weprovide-slider">
         <div class="weprovide-cards-wrapper">
@@ -881,7 +881,7 @@
 
   <div class="container mt-5">
     <!-- Section Title -->
-    <h2 class="text-center" style="color: rgb(20, 8, 89); font-size: 35px; "><b>Testimonials</b></h2>
+    <h2 class="text-center" style="color: #0a032f; font-size: 35px; "><b>Testimonials</b></h2>
     <h4 class="text-center mb-4">Our Happy Clients Say About Us</h4>
 
     <div class="row">
@@ -969,6 +969,7 @@ p12 {
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 5px;
+  color: #0a032f;
 }
 
 p13 {
@@ -998,7 +999,7 @@ p13 {
 }
 
 /* Mobile responsiveness */
-@media (max-width: 375px) {
+@media (max-width: 355px) {
   .container-wrapper {
     flex-direction: column; /* Stack left and right containers vertically */
     gap: 10px; /* Adjust gap for smaller screens */
@@ -1032,14 +1033,13 @@ p13 {
   }
 }
 
-  /* HOMEPAGE */
+/* HOMEPAGE */
 /* Full-page background image with linear gradient */
 .background-section {
   position: relative;
-  height: 80vh;
-  width: 99%;
+  height: 90vh;
+  width: 100%;
   z-index: 1;
-  margin: 5px;
 }
 
 /* Adding the gradient overlay */
@@ -1056,6 +1056,22 @@ p13 {
   background-attachment: fixed;
   z-index: -1;
   /* Ensures the overlay is behind the content */
+}
+
+/* Responsive design for max-width 355px */
+@media (max-width: 355px) {
+  .background-section {
+    position: relative;
+    height: 70vh;
+    width: 99%;
+    z-index: 1;
+  }
+
+  .background-section::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://imageio.forbes.com/specials-images/imageserve/61438f13b4b869a506b2efd0/The-Palm-island-panorama-with-Dubai-marina-in-the-background-aerial/960x0.jpg?format=jpg&width=960');
+    background-size: cover; /* Use contain to fit smaller screens */
+    background-position: center; /* Ensure the image remains centered */
+  }
 }
 
 /* General slider styling */
