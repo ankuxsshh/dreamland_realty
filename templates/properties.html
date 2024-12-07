@@ -320,115 +320,92 @@
     </div>
   </div>
 
-  <!-- Filter Overlay -->
-  <div class="overlay filter-overlay">
-    <!-- Filter Overlay Container -->
-    <div class="filter-container">
-      <h3 class="section-heading">Advanced Filters</h3>
-      <form>
-        <!-- Location Search -->
-        <div class="form-group">
-          <label for="location">Location</label>
-          <input type="text" class="form-control" id="location" placeholder="Search by location..." />
-        </div>
+<!-- Main Filter Container -->
+<div class="overlay filter-overlay">
+  <div class="filter-container">
+    <h3 class="section-heading">Advanced Filters</h3>
 
-        <!-- Property Type -->
-        <div class="form-group">
-          <label for="property-type">Property Type</label>
-          <select class="form-control" id="property-type" onchange="handlePropertyTypeChange()">
-            <option value="" disabled selected>Select Property Type</option>
-            <option value="residential">Residential</option>
-            <option value="commercial">Commercial</option>
-            <option value="agriculture">Agriculture</option>
-          </select>
-        </div>
-
-        <!-- Dynamic Property Subtypes -->
-        <div class="form-group" id="property-subtypes" style="display: none;">
-          <label>Property Subtype</label>
-          <div id="subtype-options" class="d-flex flex-wrap">
-            <!-- Options will be dynamically inserted here -->
-          </div>
-        </div>
-
-        <!-- Square Footage Slider -->
-        <div class="form-group">
-          <label for="sqft-range">Square Feet</label>
-          <div class="d-flex justify-content-between">
-            <input type="range" class="form-range" id="min-sqft" min="500" max="5000" step="100" value="500" />
-            <input type="range" class="form-range" id="max-sqft" min="500" max="5000" step="100" value="5000" />
-          </div>
-          <p class="text-muted" id="sqft-display">500 - 5000 sqft</p>
-        </div>
-
-        <!-- Price Slider -->
-        <div class="form-group">
-          <label for="price-range">Price Range</label>
-          <div class="d-flex justify-content-between">
-            <input type="range" class="form-range" id="min-price" min="100000" max="1000000000" step="50000" value="100000" />
-            <input type="range" class="form-range" id="max-price" min="100000" max="1000000000" step="50000" value="1000000000" />
-          </div>
-          <p class="text-muted" id="price-display">100,000 - 1,000,000,000</p>
-        </div>
-
-        <!-- BHK Checkbox -->
-        <div class="form-group">
-          <label>BHK</label>
-          <br />
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="1" id="bhk1" />
-            <label class="form-check-label" for="bhk1">1 BHK</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="2" id="bhk2" />
-            <label class="form-check-label" for="bhk2">2 BHK</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="3" id="bhk3" />
-            <label class="form-check-label" for="bhk3">3 BHK</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="4" id="bhk4" />
-            <label class="form-check-label" for="bhk4">4 BHK</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="5" id="bhk5" />
-            <label class="form-check-label" for="bhk5">5 BHK</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" value="5+" id="bhk5+" />
-            <label class="form-check-label" for="bhk5+">5+ BHK</label>
-          </div>
-        </div>
-
-        <!-- Property Status -->
-        <div class="form-group">
-          <label for="property-status">Status</label>
-          <select class="form-control" id="property-status">
-            <option value="available" selected>Available</option>
-            <option value="sold">Sold</option>
-          </select>
-        </div>
-
-        <!-- Sort By -->
-        <div class="form-group">
-          <label for="sort-by">Sort By</label>
-          <select class="form-control" id="sort-by">
-            <option value="newest">Newest</option>
-            <option value="price-high">Price: High to Low</option>
-            <option value="price-low">Price: Low to High</option>
-            <option value="sqft-high">Square Feet: High to Low</option>
-          </select>
-        </div>
-
-        <!-- Buttons -->
-        <div class="d-flex justify-content-between mt-4">
-          <button type="submit" class="btn btn-primary">Apply Filters</button>
-          <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
-        </div>
-      </form>
+    <!-- Country Selection Section -->
+    <div class="d-flex justify-content-left mb-4">
+      <button class="btn btn-country" style="background-color: greenyellow;" id="btn-uae">UAE</button>
+      <button class="btn btn-country"style="background-color: greenyellow;" id="btn-india">INDIA</button>
     </div>
+
+    <!-- Filter Form -->
+    <form id="filter-form">
+      <!-- Location Search -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Search by location..." />
+      </div>
+
+      <!-- Property Type Section -->
+      <div class="form-group">
+        <label for="property-type">Property Type</label>
+        <select class="form-control" id="property-type" onchange="handlePropertyTypeChange()">
+          <option value="" disabled selected>Select Property Type</option>
+        </select>
+      </div>
+
+      <!-- Property Subtype Section (conditional) -->
+      <div class="form-group" id="property-subtypes" style="display: none;">
+        <label>Property Subtype</label>
+        <div id="subtype-options" class="d-flex flex-wrap"></div>
+      </div>
+
+      <!-- Price Range Slider -->
+      <div class="form-group">
+        <label for="price-range">Price Range</label>
+        <div class="d-flex justify-content-between">
+          <input type="range" class="form-range" id="min-price" min="100000" max="1000000000" step="50000" value="100000" />
+          <input type="range" class="form-range" id="max-price" min="100000" max="1000000000" step="50000" value="1000000000" />
+        </div>
+        <p class="text-muted" id="price-display">100,000 - 1,000,000,000</p>
+      </div>
+
+      <!-- Square Footage Slider -->
+      <div class="form-group">
+        <label for="sqft-range">Square Feet</label>
+        <div class="d-flex justify-content-between">
+          <input type="range" class="form-range" id="min-sqft" min="500" max="5000" step="100" value="500" />
+          <input type="range" class="form-range" id="max-sqft" min="500" max="5000" step="100" value="5000" />
+        </div>
+        <p class="text-muted" id="sqft-display">500 - 5000 sqft</p>
+      </div>
+
+      <!-- BHK Checkbox Section (conditional) -->
+      <div class="form-group" id="bhk-options" style="display: none;">
+        <label>BHK</label>
+        <div id="bhk-buttons"></div>
+      </div>
+
+      <!-- Property Status Section -->
+      <div class="form-group">
+        <label for="property-status">Status</label>
+        <select class="form-control" id="property-status">
+          <option value="available">Available</option>
+          <option value="sold">Sold</option>
+        </select>
+      </div>
+
+      <!-- Sort By Section -->
+      <div class="form-group">
+        <label for="sort-by">Sort By</label>
+        <select class="form-control" id="sort-by">
+          <option value="newest">Newest</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="price-low">Price: Low to High</option>
+        </select>
+      </div>
+
+      <!-- Apply Filters Section -->
+      <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-primary">Apply Filters</button>
+        <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
+      </div>
+    </form>
   </div>
+</div>
 
   <br />
 
