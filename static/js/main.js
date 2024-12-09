@@ -98,103 +98,87 @@ function initializeRangeSliders() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const locationBtn = document.getElementById('btn-uae');
-    const indiaBtn = document.getElementById('btn-india');
+    const countryButtons = {
+        dubai: document.getElementById('btn-dubai'),
+        india: document.getElementById('btn-india')
+    };
+
     const locationInput = document.getElementById('location');
     const propertyTypeSelect = document.getElementById('property-type');
-    const propertySubtypesDiv = document.getElementById('property-subtypes');
-    const subtypeOptionsDiv = document.getElementById('subtype-options');
+    const propertySubtypeDiv = document.getElementById('property-subtypes');
+    const subtypeSelect = document.getElementById('property-subtype');
+    const conditionalFilters = document.getElementById('conditional-filters');
+    const sqftRangeDiv = document.getElementById('sqft-range');
+    const bhkDiv = document.getElementById('bhk-options');
     const priceDisplay = document.getElementById('price-display');
     const minPrice = document.getElementById('min-price');
     const maxPrice = document.getElementById('max-price');
-    const sqftDisplay = document.getElementById('sqft-display');
-    const minSqft = document.getElementById('min-sqft');
-    const maxSqft = document.getElementById('max-sqft');
-    const bhkDiv = document.getElementById('bhk-options');
 
-    let country = 'UAE';
+    let country = 'dubai';
 
-    // Event listeners for country buttons
-    locationBtn.addEventListener('click', () => {
-        country = 'UAE';
-        updateLocationOptions();
-    });
-
-    indiaBtn.addEventListener('click', () => {
-        country = 'India';
-        updateLocationOptions();
-    });
-
-    // Update location-related options based on selected country
-    function updateLocationOptions() {
-        if (country === 'UAE') {
+    // Update filter options dynamically based on the country
+    function updateCountryFilters() {
+        if (country === 'dubai') {
+            locationInput.placeholder = 'Search properties in Dubai';
             propertyTypeSelect.innerHTML = `
                 <option value="residential">Residential</option>
             `;
-            locationInput.placeholder = "Search properties in UAE";
-        } else if (country === 'India') {
+        } else {
+            locationInput.placeholder = 'Search properties in India';
             propertyTypeSelect.innerHTML = `
                 <option value="residential">Residential</option>
                 <option value="commercial">Commercial</option>
             `;
-            locationInput.placeholder = "Search properties in India";
         }
+        clearFilters();
     }
 
     // Handle property type change
-    propertyTypeSelect.addEventListener('change', handlePropertyTypeChange);
-
-    function handlePropertyTypeChange() {
+    propertyTypeSelect.addEventListener('change', () => {
         const propertyType = propertyTypeSelect.value;
-        let options = [];
 
         if (propertyType === 'residential') {
-            options = ['Villas', 'Apartments', 'Independent Houses', 'Residential Land'];
-        } else if (propertyType === 'commercial') {
-            options = ['Office', 'Industries', 'Shopping Complexes'];
-        } else if (propertyType === 'agriculture') {
-            options = ['Land', 'Farm Houses'];
+            const options = country === 'dubai' ? ['Flats', 'Apartments', 'Townhouses'] :
+                ['Residential Lands', 'Flats', 'Villas', 'Apartments', 'Houses'];
+            updateSubtypeOptions(options);
+        } else if (propertyType === 'commercial' && country === 'india') {
+            updateSubtypeOptions(['Farmhouse', 'Office Spaces', 'Rental Spaces', 'Factories', 'Godowns']);
         }
+    });
 
-        updateSubtypeOptions(options);
-    }
-
-    // Update subtypes based on selected property type
+    // Update subtypes dynamically
     function updateSubtypeOptions(options) {
-        subtypeOptionsDiv.innerHTML = '';
+        subtypeSelect.innerHTML = '';
         options.forEach(option => {
-            const optionDiv = document.createElement('div');
-            optionDiv.classList.add('form-check');
-            optionDiv.innerHTML = `
-                <input class="form-check-input" type="checkbox" value="${option}" id="${option}">
-                <label class="form-check-label" for="${option}">${option}</label>
-            `;
-            subtypeOptionsDiv.appendChild(optionDiv);
+            const optionElement = document.createElement('option');
+            optionElement.value = option.toLowerCase();
+            optionElement.textContent = option;
+            subtypeSelect.appendChild(optionElement);
         });
-        propertySubtypesDiv.style.display = 'block';
+        propertySubtypeDiv.style.display = 'block';
+        conditionalFilters.style.display = 'block';
     }
 
-    // Update price display based on selected price range
-    function updatePriceDisplay() {
-        const min = parseInt(minPrice.value, 10);
-        const max = parseInt(maxPrice.value, 10);
-        priceDisplay.textContent = `$${min.toLocaleString()} - $${max.toLocaleString()}`;
+    // Clear all filters
+    function clearFilters() {
+        propertySubtypeDiv.style.display = 'none';
+        sqftRangeDiv.style.display = 'none';
+        bhkDiv.style.display = 'none';
+        conditionalFilters.style.display = 'none';
     }
 
-    // Update square footage display based on selected range
-    function updateSqftDisplay() {
-        const min = parseInt(minSqft.value, 10);
-        const max = parseInt(maxSqft.value, 10);
-        sqftDisplay.textContent = `${min} - ${max} sqft`;
-    }
+    // Country button event listeners
+    countryButtons.dubai.addEventListener('click', () => {
+        country = 'dubai';
+        updateCountryFilters();
+    });
 
-    // Event listeners for sliders
-    minPrice.addEventListener('input', updatePriceDisplay);
-    maxPrice.addEventListener('input', updatePriceDisplay);
-    minSqft.addEventListener('input', updateSqftDisplay);
-    maxSqft.addEventListener('input', updateSqftDisplay);
+    countryButtons.india.addEventListener('click', () => {
+        country = 'india';
+        updateCountryFilters();
+    });
 
-    // Initial update
-    updatePriceDisplay();
-    updateSqftDisplay();
+    // Initialize with Dubai filters
+    updateCountryFilters();
 });
+
