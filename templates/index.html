@@ -9,24 +9,24 @@
   <br>
   <br>
   <br>
-  <div class="background-section d-flex align-items-center justify-content-center">
-    <div class="text-center text-white">
-      <h1 class="h3-heading text-white" style="font-size: 40px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);"><b>Welcome to Dreams Land Realty</b></h1>
-      <p class="p-heading text-white" style="font-size: 22px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);"><b>Your dream property awaits you.</b></p>      
-
+  <div class="background-section d-flex align-items-center justify-content-center animate-section">
+    <div class="text-center text-white animate-section">
+      <h1 class="h3-heading text-white" style="font-size: 40px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);"><b>Welcome to DREAMS LAND REALTY</b></h1>
+      <p class="p-heading text-white" style="font-size: 22px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);"><b>Your dream property awaits you</b></p>      
+  
       <!-- Search Bar Section -->
-      <div class="container mt-4">
+      <div class="container mt-4 animate-section">
         <div class="search-bar d-flex justify-content-center">
-            <div class="input-group align-items-stretch">
-                <button class="btn btn-primary location-btn" type="button" style=" border-radius: 5px;">
-                    <i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i>
-                </button>
-                <input type="text" class="form-control" placeholder="Search properties..." aria-label="Search properties" />
-                <button class="btn btn-primary bars-btn" type="button" style=" border-radius: 5px;">
-                    <i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i>
-                </button>
-                <button class="contact-btn btn btn-primary" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
-            </div>
+          <div class="input-group align-items-stretch">
+            <button class="btn btn-primary location-btn animate-section" type="button" style=" border-radius: 5px;">
+              <i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i>
+            </button>
+            <input type="text" class="form-control animate-section" placeholder="Search properties..." aria-label="Search properties" />
+            <button class="btn btn-primary bars-btn animate-section" type="button" style=" border-radius: 5px;">
+              <i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i>
+            </button>
+            <button class="contact-btn btn btn-primary animate-section" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
+          </div>
         </div> 
       </div>   
     </div> 
@@ -332,8 +332,8 @@
 
     <!-- Country Selection Section -->
     <div class="d-flex justify-content-left mb-3">
-      <button class="btn btn-country" style="background-color: greenyellow;" id="btn-dubai">Dubai</button>
-      <button class="btn btn-country" style="background-color: greenyellow;" id="btn-india">India</button>
+      <button class="btn btn-country" style="background-color: rgb(20, 8, 89); color: white; margin: 10px;" id="btn-dubai">U A E</button>
+      <button class="btn btn-country" style="background-color: rgb(20, 8, 89); color: white; margin: 10px;" id="btn-india">I N D I A</button>
     </div>
 
     <!-- Filter Form -->
@@ -347,7 +347,7 @@
       <!-- Property Type Section -->
       <div class="form-group">
         <label for="property-type">Property Type</label>
-        <select class="form-control" id="property-type" onchange="handlePropertyTypeChange()">
+        <select class="form-control" id="property-type">
           <option value="" disabled selected>Select Property Type</option>
         </select>
       </div>
@@ -381,16 +381,28 @@
         </div>
 
         <!-- BHK Options -->
-        <div class="form-group" id="bhk-options" style="display: none;">
+        <div class="form-group mb-4" id="bhk-options" style="display: flex; gap: 10px;">
           <label>BHK</label>
-          <div class="btn-group" role="group">
-            <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off">
-            <label class="btn btn-outline-primary" for="bhk-1">1 BHK</label>
-            <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off">
-            <label class="btn btn-outline-primary" for="bhk-2">2 BHK</label>
-            <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off">
-            <label class="btn btn-outline-primary" for="bhk-3">3 BHK</label>
-          </div>
+        <br>
+        <div class="btn-group" role="group">
+          <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-1">1</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-2">2</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-3">3</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-4" value="4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-4">4</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-5" value="5" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-5">5</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-5+" value="5+" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-5+">5+</label>
+        </div>
         </div>
 
         <!-- Status Dropdown -->
@@ -421,7 +433,7 @@
   </div>
 </div>
 
-  <div class="container-fluid mt-5">
+  <div class="container-fluid mt-5 animate-section">
     <b><h5 class="text-center" style="font-size: 32px;">Featured Properties</h5></b>
     <!-- Row -->
     <div class="row justify-content-center gx-3 mt-4">
@@ -722,17 +734,17 @@
   <br />
   <br />
   
-  <h2 class="text-center">Reach out with any questions you have.</h2>
-  <div class="container mt-5 d-flex justify-content-center">
-    <div class="row align-items-center">
+  <h2 class="text-center animate-section">Reach out with any questions you have.</h2>
+  <div class="container mt-5 d-flex justify-content-center animate-section">
+    <div class="row align-items-center animate-section">
       <!-- Image Section -->
-      <div class="col-md-6 d-flex justify-content-center mb-3">
-        <div class="image-container">
+      <div class="col-md-6 d-flex justify-content-center mb-3 animate-section">
+        <div class="image-container animate-section">
           <img src="https://img.freepik.com/free-photo/medium-shot-woman-working-with-hijab-indoors_23-2150751927.jpg?t=st=1725090984~exp=1725094584~hmac=a7d71cd1a243e5bdcaa1ba9000010fff7c29d86a9cbbf1d76e840acd88de6347&w=360" alt="Property Image" style="border-radius: 10px;"/>
         </div>
       </div>
       <!-- Form Section -->
-      <div class="col-md-6 d-flex justify-content-center mb-3">
+      <div class="col-md-6 d-flex justify-content-center mb-3 animate-section">
         <div class="form-container">
           <form>
             <div class="form-group">
@@ -767,7 +779,7 @@
     </div>
   </div>
 
-  <div class="container mt-5">
+  <div class="container mt-5 animate-section">
     <h2 class="title-main text-center mb-4" style="color:  #0a032f;">Explore Our Features</h2>
     <div class="row justify-content-center">
       <!-- Property Shot Card 1 -->
@@ -800,7 +812,7 @@
     </div>
   </div>
 
-  <div class="container my-5">
+  <div class="container my-5 animate-section">
     <div class="row">
       <!-- Left Div for Paragraph Text -->
       <div class="col-md-6 p-4 text-container justify-content-center  shadow-sm bg-light">
@@ -809,14 +821,14 @@
       </div>
 
       <!-- Right Div for YouTube Video -->
-      <div class="col-md-6 video-container">
+      <div class="col-md-6 video-container animate-section">
         <a href="https://youtu.be/M-j_LvEK2ZA?si=Mcnk-gcwuW8Zx7iC" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/M-j_LvEK2ZA?si=aRoiGd6JA39thuZD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></a>
       </div>
     </div>
   </div>
 
 <section>
-  <div class="container-fluid">
+  <div class="container-fluid animate-section">
 <h2 class="text-center" style="color: #0a032f; font-size: 38px; "><b>Associated Builders</b></h2>
     <div class="col-12">
       <div class="weprovide-slider">
@@ -864,10 +876,10 @@
   </div>
 </section>
 
-  <div class="container mt-5">
+  <div class="container mt-5 animate-section">
     <!-- Section Title -->
-    <h2 class="text-center" style="color: #0a032f; font-size: 35px; "><b>Testimonials</b></h2>
-    <h4 class="text-center mb-4">Our Happy Clients Say About Us</h4>
+    <h2 class="text-center animate-section" style="color: #0a032f; font-size: 35px; "><b>Testimonials</b></h2>
+    <h4 class="text-center mb-4 animate-section">Our Happy Clients Say About Us</h4>
 
     <div class="row">
         <!-- Testimonial 1 -->
@@ -915,9 +927,9 @@
 </div>
 </div>
 
-<div class="container mt-5">
-  <div class="container-wrapper">
-    <div class="left-container">
+<div class="container mt-5 animate-section">
+  <div class="container-wrapper animate-section">
+    <div class="left-container animate-section">
       <p11>At Dreams Land Realty, we’re not just in the business of properties; we’re in the business of dreams.</p11>
       <p11>We combine expertise with a personal touch, treating every client like family.</p11>
       <p11> Our mission is to be your partner in real estate, leveraging innovation and integrity to secure </p11>
@@ -926,7 +938,7 @@
       <p12>- Vimal Vidhyadharan</p12>
       <p13><b>Founder of Dreams Land Realty</b></p13>
     </div>
-    <div class="right-container">
+    <div class="right-container animate-section">
       <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/ceo.png" alt="CEO Image">
     </div>
   </div>
@@ -1022,7 +1034,7 @@ p13 {
 /* Full-page background image with linear gradient */
 .background-section {
   position: relative;
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   z-index: 1;
 }
@@ -1035,7 +1047,7 @@ p13 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://imageio.forbes.com/specials-images/imageserve/61438f13b4b869a506b2efd0/The-Palm-island-panorama-with-Dubai-marina-in-the-background-aerial/960x0.jpg?format=jpg&width=960');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://imageio.forbes.com/specials-images/imageserve/61438f13b4b869a506b2efd0/The-Palm-island-panorama-with-Dubai-marina-in-the-background-aerial/960x0.jpg?format=jpg&width=960');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1048,7 +1060,7 @@ p13 {
   .background-section {
     position: relative;
     height: 70vh;
-    width: 99%;
+    width: 100%;
     z-index: 1;
   }
 

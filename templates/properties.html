@@ -8,19 +8,19 @@
   <br />
   <br />
   <!-- Parallax Section -->
-  <div class="parallax-section">
-    <div class="parallax-content text-center text-white">
+  <div class="parallax-section animate-section">
+    <div class="parallax-content text-center text-white animate-section">
       <h1 class="text-white">Properties</h1>
       <p class="text-white">Dreams Land Realty: Your Trusted Real Estate Partner</p>
 
       <!-- Search Bar Section -->
-      <div class="container mt-4">
-        <div class="search-bar d-flex justify-content-center">
-          <div class="input-group align-items-stretch">
-            <button class="btn btn-primary location-btn" type="button" style=" border-radius: 5px;"><i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i></button>
-            <input type="text" class="form-control" placeholder="Search properties..." aria-label="Search properties" />
-            <button class="btn btn-primary bars-btn" type="button" style=" border-radius: 5px;"><i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i></button>
-            <button class="contact-btn btn btn-primary" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
+      <div class="container mt-4 animate-section">
+        <div class="search-bar d-flex justify-content-center animate-section">
+          <div class="input-group align-items-stretch animate-section">
+            <button class="btn btn-primary location-btn animate-section" type="button" style=" border-radius: 5px;"><i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i></button>
+            <input type="text" class="form-control animate-section" placeholder="Search properties..." aria-label="Search properties" />
+            <button class="btn btn-primary bars-btn animate-section" type="button" style=" border-radius: 5px;"><i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i></button>
+            <button class="contact-btn btn btn-primary animate-section" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
           </div>
         </div>
       </div>
@@ -320,99 +320,14 @@
     </div>
   </div>
 
-<!-- Main Filter Container -->
-<div class="overlay filter-overlay">
-  <div class="filter-container">
-    <h3 class="section-heading">Advanced Filters</h3>
 
-    <!-- Country Selection Section -->
-    <div class="d-flex justify-content-left mb-4">
-      <button class="btn btn-country" style="background-color: greenyellow;" id="btn-uae">UAE</button>
-      <button class="btn btn-country"style="background-color: greenyellow;" id="btn-india">INDIA</button>
-    </div>
-
-    <!-- Filter Form -->
-    <form id="filter-form">
-      <!-- Location Search -->
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" class="form-control" id="location" placeholder="Search by location..." />
-      </div>
-
-      <!-- Property Type Section -->
-      <div class="form-group">
-        <label for="property-type">Property Type</label>
-        <select class="form-control" id="property-type" onchange="handlePropertyTypeChange()">
-          <option value="" disabled selected>Select Property Type</option>
-        </select>
-      </div>
-
-      <!-- Property Subtype Section (conditional) -->
-      <div class="form-group" id="property-subtypes" style="display: none;">
-        <label>Property Subtype</label>
-        <div id="subtype-options" class="d-flex flex-wrap"></div>
-      </div>
-
-      <!-- Price Range Slider -->
-      <div class="form-group">
-        <label for="price-range">Price Range</label>
-        <div class="d-flex justify-content-between">
-          <input type="range" class="form-range" id="min-price" min="100000" max="1000000000" step="50000" value="100000" />
-          <input type="range" class="form-range" id="max-price" min="100000" max="1000000000" step="50000" value="1000000000" />
-        </div>
-        <p class="text-muted" id="price-display">100,000 - 1,000,000,000</p>
-      </div>
-
-      <!-- Square Footage Slider -->
-      <div class="form-group">
-        <label for="sqft-range">Square Feet</label>
-        <div class="d-flex justify-content-between">
-          <input type="range" class="form-range" id="min-sqft" min="500" max="5000" step="100" value="500" />
-          <input type="range" class="form-range" id="max-sqft" min="500" max="5000" step="100" value="5000" />
-        </div>
-        <p class="text-muted" id="sqft-display">500 - 5000 sqft</p>
-      </div>
-
-      <!-- BHK Checkbox Section (conditional) -->
-      <div class="form-group" id="bhk-options" style="display: none;">
-        <label>BHK</label>
-        <div id="bhk-buttons"></div>
-      </div>
-
-      <!-- Property Status Section -->
-      <div class="form-group">
-        <label for="property-status">Status</label>
-        <select class="form-control" id="property-status">
-          <option value="available">Available</option>
-          <option value="sold">Sold</option>
-        </select>
-      </div>
-
-      <!-- Sort By Section -->
-      <div class="form-group">
-        <label for="sort-by">Sort By</label>
-        <select class="form-control" id="sort-by">
-          <option value="newest">Newest</option>
-          <option value="price-high">Price: High to Low</option>
-          <option value="price-low">Price: Low to High</option>
-        </select>
-      </div>
-
-      <!-- Apply Filters Section -->
-      <div class="d-flex justify-content-between mt-4">
-        <button type="submit" class="btn btn-primary">Apply Filters</button>
-        <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
-      </div>
-    </form>
-  </div>
-</div>
 
   <br />
 
   <div class="container-fluid mt-5">
-    <b><h5 class="text-center" style="font-size: 32px;">Featured Properties</h5></b>
+    <b><h5 class="text-center animate-section" style="font-size: 32px;">Featured Properties</h5></b>
     <!-- Row -->
-    <div class="row justify-content-center gx-3 mt-4">
+    <div class="row justify-content-center gx-3 mt-4 animate-section">
       <!-- Card 1 -->
       <div class="col-md-4">
         <div class="card bg-light">
@@ -559,7 +474,7 @@
     </div>
 
     <!-- Row 2 -->
-    <div class="row justify-content-center gx-3 mt-4">
+    <div class="row justify-content-center gx-3 mt-4 animate-section">
       <!-- Card 4 -->
       <div class="col-md-4">
         <div class="card bg-light">
@@ -705,7 +620,7 @@
       </div>
     </div>
     <!-- Row -->
-    <div class="row justify-content-center gx-3 mt-4">
+    <div class="row justify-content-center gx-3 mt-4 animate-section">
       <!-- Card 1 -->
       <div class="col-md-4">
         <div class="card bg-light">

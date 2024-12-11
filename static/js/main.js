@@ -37,6 +37,136 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const countryButtons = {
+        dubai: document.getElementById('btn-dubai'),
+        india: document.getElementById('btn-india')
+    };
+
+    const locationInput = document.getElementById('location');
+    const propertyTypeSelect = document.getElementById('property-type');
+    const propertySubtypeDiv = document.getElementById('property-subtypes');
+    const subtypeSelect = document.getElementById('property-subtype');
+    const conditionalFilters = document.getElementById('conditional-filters');
+    const sqftRangeDiv = document.getElementById('sqft-range');
+    const bhkDiv = document.getElementById('bhk-options');
+    const priceDisplay = document.getElementById('price-display');
+    const minPrice = document.getElementById('min-price');
+    const maxPrice = document.getElementById('max-price');
+
+    let country = 'dubai';
+
+    // Update filter options dynamically based on the country
+    function updateCountryFilters() {
+        if (country === 'dubai') {
+            locationInput.placeholder = 'Search properties in Dubai';
+            propertyTypeSelect.innerHTML = `
+                <option value="residential">Residential</option>
+            `;
+        } else {
+            locationInput.placeholder = 'Search properties in India';
+            propertyTypeSelect.innerHTML = `
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+            `;
+        }
+        clearFilters();
+    }
+
+    // Handle property type change
+    propertyTypeSelect.addEventListener('change', () => {
+        const propertyType = propertyTypeSelect.value;
+
+        if (propertyType === 'residential') {
+            if (country === 'dubai') {
+                updateSubtypeOptions(['Flats', 'Apartments', 'Townhouses']);
+            } else {
+                updateSubtypeOptions(['Residential Lands', 'Flats', 'Villas', 'Apartments', 'Houses']);
+            }
+        } else if (propertyType === 'commercial' && country === 'india') {
+            updateSubtypeOptions(['Farmhouse', 'Office Spaces', 'Rental Spaces', 'Factories', 'Godowns']);
+        }
+    });
+
+    // Update subtypes dynamically
+    function updateSubtypeOptions(options) {
+        subtypeSelect.innerHTML = '';
+        options.forEach(option => {
+            const optionElement = document.createElement('option');
+            optionElement.value = option.toLowerCase();
+            optionElement.textContent = option;
+            subtypeSelect.appendChild(optionElement);
+        });
+        propertySubtypeDiv.style.display = 'block';
+        conditionalFilters.style.display = 'block';
+        setupSubTypeFilters(options);
+    }
+
+    // Set up filters based on the selected sub-type
+    function setupSubTypeFilters(options) {
+        if (country === 'dubai') {
+            if (options.includes('Flats') || options.includes('Apartments') || options.includes('Townhouses')) {
+                setupDubaiResidentialFilters();
+            }
+        } else {
+            if (options.includes('Residential Lands')) {
+                setupIndiaResidentialLandFilters();
+            } else {
+                setupIndiaResidentialFilters();
+            }
+        }
+    }
+
+    // Dubai Residential Filters
+    function setupDubaiResidentialFilters() {
+        sqftRangeDiv.style.display = 'block';
+        bhkDiv.style.display = 'block';
+        priceDisplay.textContent = 'Price Range (AED)';
+    }
+
+    // India Residential Land Filters
+    function setupIndiaResidentialLandFilters() {
+        sqftRangeDiv.style.display = 'none';
+        bhkDiv.style.display = 'none';
+        priceDisplay.textContent = 'Price Range (INR)';
+    }
+
+    // India Residential Filters
+    function setupIndiaResidentialFilters() {
+        sqftRangeDiv.style.display = 'block';
+        bhkDiv.style.display = 'block';
+        priceDisplay.textContent = 'Price Range (INR)';
+    }
+
+    // India Commercial Filters
+    function setupIndiaCommercialFilters() {
+        sqftRangeDiv.style.display = 'block';
+        bhkDiv.style.display = 'none';
+        priceDisplay.textContent = 'Price Range (INR)';
+    }
+
+    // Clear all filters
+    function clearFilters() {
+        propertySubtypeDiv.style.display = 'none';
+        sqftRangeDiv.style.display = 'none';
+        bhkDiv.style.display = 'none';
+        conditionalFilters.style.display = 'none';
+    }
+
+    // Country button event listeners
+    countryButtons.dubai.addEventListener('click', () => {
+        country = 'dubai';
+        updateCountryFilters();
+    });
+
+    countryButtons.india.addEventListener('click', () => {
+        country = 'india';
+        updateCountryFilters();
+    });
+
+    // Initialize with Dubai filters
+    updateCountryFilters();
+});
 
 function initializeRangeSliders() {
     // Square Footage Elements
@@ -96,89 +226,3 @@ function initializeRangeSliders() {
     updateSqftDisplay()
     updatePriceDisplay()
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const countryButtons = {
-        dubai: document.getElementById('btn-dubai'),
-        india: document.getElementById('btn-india')
-    };
-
-    const locationInput = document.getElementById('location');
-    const propertyTypeSelect = document.getElementById('property-type');
-    const propertySubtypeDiv = document.getElementById('property-subtypes');
-    const subtypeSelect = document.getElementById('property-subtype');
-    const conditionalFilters = document.getElementById('conditional-filters');
-    const sqftRangeDiv = document.getElementById('sqft-range');
-    const bhkDiv = document.getElementById('bhk-options');
-    const priceDisplay = document.getElementById('price-display');
-    const minPrice = document.getElementById('min-price');
-    const maxPrice = document.getElementById('max-price');
-
-    let country = 'dubai';
-
-    // Update filter options dynamically based on the country
-    function updateCountryFilters() {
-        if (country === 'dubai') {
-            locationInput.placeholder = 'Search properties in Dubai';
-            propertyTypeSelect.innerHTML = `
-                <option value="residential">Residential</option>
-            `;
-        } else {
-            locationInput.placeholder = 'Search properties in India';
-            propertyTypeSelect.innerHTML = `
-                <option value="residential">Residential</option>
-                <option value="commercial">Commercial</option>
-            `;
-        }
-        clearFilters();
-    }
-
-    // Handle property type change
-    propertyTypeSelect.addEventListener('change', () => {
-        const propertyType = propertyTypeSelect.value;
-
-        if (propertyType === 'residential') {
-            const options = country === 'dubai' ? ['Flats', 'Apartments', 'Townhouses'] :
-                ['Residential Lands', 'Flats', 'Villas', 'Apartments', 'Houses'];
-            updateSubtypeOptions(options);
-        } else if (propertyType === 'commercial' && country === 'india') {
-            updateSubtypeOptions(['Farmhouse', 'Office Spaces', 'Rental Spaces', 'Factories', 'Godowns']);
-        }
-    });
-
-    // Update subtypes dynamically
-    function updateSubtypeOptions(options) {
-        subtypeSelect.innerHTML = '';
-        options.forEach(option => {
-            const optionElement = document.createElement('option');
-            optionElement.value = option.toLowerCase();
-            optionElement.textContent = option;
-            subtypeSelect.appendChild(optionElement);
-        });
-        propertySubtypeDiv.style.display = 'block';
-        conditionalFilters.style.display = 'block';
-    }
-
-    // Clear all filters
-    function clearFilters() {
-        propertySubtypeDiv.style.display = 'none';
-        sqftRangeDiv.style.display = 'none';
-        bhkDiv.style.display = 'none';
-        conditionalFilters.style.display = 'none';
-    }
-
-    // Country button event listeners
-    countryButtons.dubai.addEventListener('click', () => {
-        country = 'dubai';
-        updateCountryFilters();
-    });
-
-    countryButtons.india.addEventListener('click', () => {
-        country = 'india';
-        updateCountryFilters();
-    });
-
-    // Initialize with Dubai filters
-    updateCountryFilters();
-});
-

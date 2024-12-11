@@ -8,7 +8,6 @@ STATUS_CHOICES = [
 PROPERTY_TYPE_CHOICES = [
     ('residential', 'Residential'),
     ('commercial', 'Commercial'),
-    ('agriculture', 'Agriculture'),
 ]
 
 PROPERTY_SUBTYPE_CHOICES = {
@@ -22,10 +21,7 @@ PROPERTY_SUBTYPE_CHOICES = {
         ('office', 'Office'),
         ('industries', 'Industries'),
         ('shopping_complexes', 'Shopping Complexes'),
-    ],
-    'agriculture': [
-        ('land', 'Land'),
-        ('farm_houses', 'Farm Houses'),
+        ('farm_houses', 'Farm Houses')
     ],
 }
 
@@ -37,6 +33,7 @@ class Property(models.Model):
     possession_date = models.DateField()
     property_status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='available')
     property_description = models.TextField()
+    short_description = models.TextField()
     property_images = models.ImageField(upload_to='properties/images', blank=True, null=True)
     property_type = models.CharField(max_length=50, choices=PROPERTY_TYPE_CHOICES)
     property_subtype = models.CharField(max_length=255, choices=PROPERTY_SUBTYPE_CHOICES)
