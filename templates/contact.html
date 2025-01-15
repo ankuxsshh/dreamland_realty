@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Contact Us - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+  <br />
+  <br />
+  <!-- Parallax Section -->
+  <div class="parallax-section animate-section">
+    <div class="parallax-content text-center text-white animate-section">
+      <h1 class="text-white">Contact Us</h1>
+      <p class="text-white">We're here to help you with all your real estate needs.</p>
+    </div>
+  </div>
+
+  <!-- Contact and Address Section -->
+  <div class="container mt-5 animate-section">
+    <div class="row justify-content-around text-center animate-section">
+      <!-- Contact Section -->
+      <div class="col-md-5 animate-section">
+        <div class="d-flex align-items-center justify-content-center mb-3 animate-section">
+          <!-- Icon Circle -->
+          <div class="icon-circle d-flex justify-content-center align-items-center me-3 animate-section">
+            <i class="fa-regular fa-address-book fa-2x"></i>
+          </div>
+          <!-- Contact Heading -->
+          <h2 class="mb-0 animate-section">Contact</h2>
+        </div>
+        <p class="animate-section">info@dreamslandrealty.com</p>
+        <p class="animate-section">+91 8891094916</p>
+        <p class="animate-section">+91 6238061066</p>
+      </div>
+
+      <!-- Address Section -->
+      <div class="col-md-5 animate-section">
+        <div class="d-flex align-items-center justify-content-center mb-3 animate-section">
+          <!-- Icon Circle -->
+          <div class="icon-circle d-flex justify-content-center align-items-center me-3 animate-section">
+            <i class="fa-solid fa-house fa-2x animate-section"></i>
+          </div>
+          <!-- Address Heading -->
+          <h2 class="mb-0 animate-section">Address</h2>
+        </div>
+        <p class="animate-section">Thottathil House, Kanjoor Parappuram 683575</p>
+        <p class="animate-section">Ernakulam District, Kerala, India</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Form Section -->
+  <div class="container my-5 animate-section">
+    <div class="row justify-content-center animate-section">
+      <!-- Left Container -->
+      <div class="col-md-6 d-flex flex-column justify-content-center align-items-center animate-section" style="background-color: #e0e0e0; height: 500px; padding: 30px;">
+        <h2 class="text-center animate-section" style="color: #0a032f;">Get in Touch</h2>
+        <p class="text-center animate-section">Fill out the form below, and our team will get back to you shortly!</p>
+        <p class="text-center animate-section">Whether you have questions about our services or need assistance, we're here to help.</p>
+      </div>
+
+      <!-- Right Container -->
+      <div class="col-md-6 bg-light animate-section">
+        <form action="#" method="post">
+          <h2 class="text-center animate-section" style="color: #0a032f;">Contact Form</h2>
+          <div class="mb-1">
+            <label for="name" class="form-label animate-section"></label>
+            <input type="text" class="form-control animate-section" id="name" placeholder="Enter your name" required />
+          </div>
+          <div class="mb-1">
+            <label for="email" class="form-label animate-section"></label>
+            <input type="email" class="form-control animate-section" id="email" placeholder="Enter your email" required />
+          </div>
+          <div class="mb-1">
+            <label for="message" class="form-label animate-section"></label>
+            <textarea class="form-control animate-section" id="message" rows="4" placeholder="Enter your message here" required></textarea>
+          </div>
+          <button type="submit" class="button animate-section" style="width: 100%; margin: 5px;">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

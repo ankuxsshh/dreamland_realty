@@ -1,0 +1,379 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  {{ location }} - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+<br>
+<br>
+  <!-- Parallax Section -->
+  <div class="parallax-section animate-section">
+    <div class="parallax-content text-center text-white animate-section">
+      <h1 class="text-white">{{ location }}</h1>
+      <p class="text-white">Dreams Land Realty: Your Trusted Real Estate Partner</p>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="container-fluid mt-5 animate-section">
+    <b><h5 class="text-center animate-section" style="font-size: 32px;">Properties in {{ location }}</h5></b>
+    <!-- Row -->
+    <div class="row justify-content-center gx-3 animate-section">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://cms.interiorcompany.com/wp-content/uploads/2023/11/material-used-for-kerala-houses.png" alt="Property 1" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Available</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://miro.medium.com/v2/resize:fit:1358/0*8CvkvD4qEsxJoYZg" alt="Property 2" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Sold</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 3" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Available</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row justify-content-center gx-3 mt-4">
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://www.konceptdekor.com/wp-content/uploads/2019/10/Conteporary-Home-1024x773.jpg" alt="Property 4" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Available</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 5" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Available</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card bg-light">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 6" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>{{ location }}</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>Status</b>
+                  </p>
+                  <p class="p12">Sold</p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <br>
+  <br>
+  <br>
+<style>
+    .parallax-section {
+        background-image: url("https://bladerunnerunicorn.com/wp-content/uploads/2024/02/1-The-booming-demand-for-luxury-real-estate-in-Dubai-attracts-the-global-elite.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin: 5px;
+      }
+  
+      .parallax-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+      }
+  
+      .parallax-content {
+        z-index: 2;
+      }
+  
+      .parallax-content h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+  
+      .parallax-content p {
+        font-size: 1.25rem;
+        font-weight: 300;
+      }
+  
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .parallax-content h1 {
+          font-size: 2.5rem;
+        }
+  
+        .parallax-content p {
+          font-size: 1rem;
+        }
+  
+        .overlay-heading {
+          font-size: 20px; /* Ensure the heading is appropriately sized on mobile */
+        }
+  
+        .text {
+          font-size: 14px; /* Adjust the paragraph text for better readability */
+        }
+      }
+</style>
+{% endblock %}

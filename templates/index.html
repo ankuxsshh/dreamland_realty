@@ -1,0 +1,1128 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+<body>
+  <br>
+  <br>
+  <br>
+  <div class="background-section d-flex align-items-center justify-content-center animate-section">
+    <div class="text-center text-white animate-section">
+      <h1 class="h3-heading text-white" style="font-size: 40px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);"><b>Welcome to DREAMS LAND REALTY</b></h1>
+      <p class="p-heading text-white" style="font-size: 22px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);"><b>Your dream property awaits you</b></p>      
+  
+      <!-- Search Bar Section -->
+      <div class="container mt-4 animate-section">
+        <div class="search-bar d-flex justify-content-center">
+          <div class="input-group align-items-stretch">
+            <button class="btn btn-primary location-btn animate-section" type="button" style=" border-radius: 5px;">
+              <i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i>
+            </button>
+            <input type="text" class="form-control animate-section" placeholder="Search properties..." aria-label="Search properties" />
+            <button class="btn btn-primary bars-btn animate-section" type="button" style="border-radius: 5px;">
+              <i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i>
+            </button>
+            <button class="contact-btn btn btn-primary animate-section" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
+          </div>
+        </div> 
+      </div>   
+    </div> 
+  </div>
+
+<!-- Location Overlay -->
+  <div class="overlay location-overlay">
+    <!-- Location Info Container -->
+    <div class="location-container">
+      <h3 class="section-heading">UAE Locations</h3>
+      <div class="location-cards d-flex flex-wrap">
+        <!-- Abu Dhabi Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/abu_dhabi">
+            <img src="https://content.r9cdn.net/rimg/dimg/a8/85/bbf8aa0b-city-9457-164d6a9147e.jpg?width=1366&height=768&xhint=2731&yhint=1539&crop=true" class="card-img" alt="Abu Dhabi" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Abu Dhabi</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Sharjah Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/sharjah">
+            <img src="https://www.shutterstock.com/image-photo/sharjah-al-majaz-noor-mosque-600nw-2374439611.jpg" class="card-img" alt="Sharjah" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Sharjah</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Dubai Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/dubai">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Dubai_Skylines_at_night_%28Pexels_3787839%29.jpg/1200px-Dubai_Skylines_at_night_%28Pexels_3787839%29.jpg" class="card-img" alt="Dubai" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Dubai</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Umm Al Quwain Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/umm_al_quwain">
+            <img src="https://i.pinimg.com/originals/5b/95/05/5b9505e8a045785231bc1317b9d62771.jpg" class="card-img" alt="Umm Al Quwain" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Umm Al Quwain</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Fujairah Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/fujairah">
+            <img src="https://thetravelshots.com/wp-content/uploads/2021/10/Fujairah.jpg" class="card-img" alt="Fujairah" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Fujairah</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Ajman Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/ajman">
+            <img src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/06/27/c73e460a6d7e461ecb401c3dc03838fc_1000x1000.jpg" class="card-img" alt="Ajman" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Ajman</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Ras Al Khaimah Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/ras_al_khaimah">
+            <img src="https://media.istockphoto.com/id/672429170/photo/ras-al-khaimah-creek-at-night.jpg?s=612x612&w=0&k=20&c=py_0Aiv3nRGmT3U2O39eiiFILVrpWBjNGK9FYjXN89M=" class="card-img" alt="Ras Al Khaimah" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Ras Al Khaimah</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <br />
+      <h3 class="section-heading mt-4">INDIA Locations</h3>
+      <div class="location-cards d-flex flex-wrap">
+        <!-- Trivandrum Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/trivandrum">
+            <img src="https://media.istockphoto.com/id/510698174/photo/beach-in-thiruvananthapuram.jpg?s=612x612&w=0&k=20&c=6XZx-h3IBycESwKMP5J-k-tlic741vPkGPQICM6vFuM=" class="card-img" alt="Trivandrum" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Trivandrum</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Alappuzha Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/alappuzha">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Alappuzha_Boat_Beauty_W.jpg" class="card-img" alt="Alappuzha" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Alappuzha</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kottayam Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/kottayam">
+            <img src="https://irisholidays.com/keralatourism/wp-content/uploads/2021/05/places-to-visit-in-kottayam.jpg" class="card-img" alt="Kottayam" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Kottayam</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kochi Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/kochi">
+            <img src="https://media.istockphoto.com/id/148423909/photo/a-sunset-over-chinese-fishing-nets-by-a-canoe-in-cochin.jpg?s=612x612&w=0&k=20&c=76RtSZhX5iheTAyDuH6Uzl9JNWD5axbWlEWc2bXKChw=" class="card-img" alt="Kochi" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Kochi</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Thrissur Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/thrissur">
+            <img src="https://www.skyscrapercity.com/cdn-cgi/image/format=auto,onerror=redirect,width=1920,height=1920,fit=scale-down/https://www.skyscrapercity.com/attachments/untitled-png.934546/" class="card-img" alt="Thrissur" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Thrissur</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kozhikode Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/kozhikode">
+            <img src="https://t4.ftcdn.net/jpg/04/89/49/35/360_F_489493520_RpxWXdoNKCda1bnrjp3Bi9XqiiZFJID8.jpg" class="card-img" alt="Kozhikode" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Kozhikode</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kannur Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/kannur">
+            <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/09/02151433/places-to-visit-in-kannur-shutterstock_1604282707-1200x700-compressed.jpg" class="card-img" alt="Kannur" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Kannur</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Pune Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/pune">
+            <img src="https://images.unsplash.com/photo-1553064483-f10fe837615f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cHVuZSUyMGNpdHl8ZW58MHx8MHx8fDA%3D" class="card-img" alt="Pune" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Pune</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Delhi Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/delhi">
+            <img src="https://media.istockphoto.com/id/510795912/photo/india-gate.jpg?s=612x612&w=0&k=20&c=kZkdrEDXEtoLK6Qh8XPywc9VYV95mJXXcWLBxHftN_U=" class="card-img" alt="Delhi" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Delhi</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Noida Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/noida">
+            <img src="https://media.istockphoto.com/id/1164436096/photo/aerial-cityscape-shot-of-noida-delhi-grugaon-at-dusk-night.jpg?s=612x612&w=0&k=20&c=S6zj4NGToM8us-sw8zCBNhCiZjhoZMqOKuKuX1OTtbI=" class="card-img" alt="Noida" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Noida</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Gurugram Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/gurugram">
+            <img src="https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/06/01/Pictures/aerial-view-photo-gurugram-using-ht-drone_29ee0454-657c-11e8-b4a9-2154dcd09999.jpg" class="card-img" alt="Gurugram" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Gurugram</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Lucknow Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/lucknow">
+            <img src="https://media.istockphoto.com/id/671326926/photo/view-to-asfi-masjid-or-asfi-mosque-from-bara-imambara-balcony-lucknow.jpg?s=612x612&w=0&k=20&c=1R-4J0CuYxtToFD3AMFG67G9g697USgafrJUbsqvWeI=" class="card-img" alt="Lucknow" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Lucknow</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Hyderbad Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/hyderabad">
+            <img src="https://media.istockphoto.com/id/1215274990/photo/high-wide-angle-view-of-charminar-in-the-night.jpg?s=612x612&w=0&k=20&c=byyIjqgbslf-L191n6SJu0s35fvNoVeWsxV5rIPK7Sk=" class="card-img" alt="Hyderbad" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Hyderabad</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Chennai Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/chennai">
+            <img src="https://media.istockphoto.com/id/1226340114/photo/puratchi-thalaivar-dr-mgr-central-railway-station-chennai-central-railway-station-india.jpg?s=612x612&w=0&k=20&c=lZjBnWBBoLiApWZUUWP1Vl3XAVdKjYMcgGpItXv_L14=" class="card-img" alt="Chennai" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Chennai</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Banglore Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/banglore">
+            <img src="https://static.toiimg.com/photo/msid-54559212,width-96,height-65.cms" class="card-img" alt="Banglore" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Banglore</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Kolkata Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/kolkata">
+            <img src="https://media.istockphoto.com/id/1164386039/photo/howrah-bridge-on-river-ganges-at-kolkata-at-twilight-with-moody-sky.jpg?s=612x612&w=0&k=20&c=CHrNWdInFSDyERdvgd0f8935hZcBQU6lbYCE4LlXqUY=" class="card-img" alt="Kolkata" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Kolkata</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Ahmedabad Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/ahmedabad">
+            <img src="https://plus.unsplash.com/premium_photo-1697729749187-ec80a3f41969?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWhtZWRhYmFkJTIwY2l0eXxlbnwwfHwwfHx8MA%3D%3D" class="card-img" alt="Ahmedabad" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Ahmedabad</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Mumbai Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/mumbai">
+            <img src="https://media.istockphoto.com/id/860528756/photo/the-bandraworli-sea-link-mumbai-india.jpg?s=612x612&w=0&k=20&c=xT9TK7oYkP6TP62lHqP0H-9mfz9cWva4OcYEnt06cjc=" class="card-img" alt="Mumbai" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Mumbai</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Coimbatore Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/coimbatore">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/CHIL_SEZ.jpg" class="card-img" alt="Coimbatore" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Coimbatore</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Goa Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/goa">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/5f/a5/e7/caption.jpg?w=500&h=400&s=1" class="card-img" alt="Goa" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Goa</h5>
+            </div>
+          </a>
+        </div>
+
+        <!-- Nagpur Card -->
+        <div class="card border shadow-sm position-relative">
+          <a href="locations/nagpur">
+            <img src="https://harihar.com/assets/img/best-invest-in-nagpur.webp" class="card-img" alt="Nagpur" />
+            <div class="card-img-overlay d-flex justify-content-center align-items-center">
+              <h5>Nagpur</h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Main Filter Container -->
+<div class="overlay filter-overlay">
+  <div class="filter-container">
+    <h3 class="section-heading">Advanced Filters</h3>
+
+    <!-- Country Selection Section -->
+    <div class="d-flex justify-content-left mb-3">
+      <button class="btn btn-country" style="background-color: #16223a; color: white; margin: 10px;" id="btn-dubai">U A E</button>
+      <button class="btn btn-country" style="background-color: #16223a; color: white; margin: 10px;" id="btn-india">I N D I A</button>
+    </div>
+
+    <!-- Filter Form -->
+    <form id="filter-form">
+      <!-- Dynamic Location Search -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Search by location..." />
+      </div>
+
+      <!-- Property Type Section -->
+      <div class="form-group">
+        <label for="property-type">Property Type</label>
+        <select class="form-control" id="property-type">
+          <option value="" disabled selected>Select Property Type</option>
+        </select>
+      </div>
+
+      <!-- Property Subtype Section -->
+      <div class="form-group" id="property-subtypes" style="display: none;">
+        <label>Property Subtype</label>
+        <select class="form-control" id="property-subtype"></select>
+      </div>
+
+      <!-- Conditional Filters -->
+      <div id="conditional-filters" style="display: none;">
+        <!-- Price Range Slider -->
+        <div class="form-group">
+          <label for="price-range">Price Range</label>
+          <div class="d-flex justify-content-between">
+            <input type="range" class="form-range" id="min-price" min="0" max="10000000" step="10000" value="0" />
+            <input type="range" class="form-range" id="max-price" min="0" max="10000000" step="10000" value="10000000" />
+          </div>
+          <p class="text-muted" id="price-display">0 - 10,000,000</p>
+        </div>
+
+        <!-- Square Footage Slider -->
+        <div class="form-group" id="sqft-range" style="display: none;">
+          <label for="sqft-range">Square Feet</label>
+          <div class="d-flex justify-content-between">
+            <input type="range" class="form-range" id="min-sqft" min="500" max="5000" step="100" value="500" />
+            <input type="range" class="form-range" id="max-sqft" min="500" max="5000" step="100" value="5000" />
+          </div>
+          <p class="text-muted" id="sqft-display">500 - 5000 sqft</p>
+        </div>
+
+        <!-- BHK Options -->
+        <div class="form-group mb-4" id="bhk-options" style="display: flex; gap: 10px;">
+          <label>BHK</label>
+        <br>
+        <div class="btn-group" role="group">
+          <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-1">1</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-2">2</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-3">3</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-4" value="4" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-4">4</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-5" value="5" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-5">5</label>
+
+          <input type="radio" class="btn-check" name="bhk" id="bhk-5+" value="5+" autocomplete="off">
+          <label class="btn btn-outline-primary" for="bhk-5+">5+</label>
+        </div>
+        </div>
+
+        <!-- Status Dropdown -->
+        <div class="form-group">
+          <label for="property-status">Status</label>
+          <select class="form-control" id="property-status">
+            <option value="available">Available</option>
+            <option value="sold">Sold</option>
+          </select>
+        </div>
+
+        <!-- Sort By Section -->
+        <div class="form-group">
+          <label for="sort-by">Sort By</label>
+          <select class="form-control" id="sort-by">
+            <option value="new-constructions">New Constructions</option>
+            <option value="under-constructions">Under Constructions</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Apply Filters Section -->
+      <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-primary">Apply Filters</button>
+        <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <div class="container-fluid mt-5">
+    <b><h5 class="text-center animate-section" style="font-size: 32px;">Featured Properties</h5></b>
+    <!-- Row -->
+    <div class="row justify-content-center gx-3 mt-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cms.interiorcompany.com/wp-content/uploads/2023/11/material-used-for-kerala-houses.png" alt="Property 1" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://miro.medium.com/v2/resize:fit:1358/0*8CvkvD4qEsxJoYZg" alt="Property 2" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 3" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row justify-content-center gx-3 mt-4">
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.konceptdekor.com/wp-content/uploads/2019/10/Conteporary-Home-1024x773.jpg" alt="Property 4" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 5" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: green;"><b>Available</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 6" />
+          <div class="container">
+            <h4>2 Bed + Modern Home</h4>
+            <p>Near Aalapuzha backwaters</p>
+            <div class="info-row">
+              <div class="row">
+                <div class="col">
+                  <p class="p12">
+                    <b>3,4 BHK</b>
+                  </p>
+                  <p class="p12">Configurations</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    <b>1607-2578</b>
+                  </p>
+                  <p class="p12">sq.ft</p>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col">
+                  <p class="p12">
+                    <b>June 2025</b>
+                  </p>
+                  <p class="p12">Possession</p>
+                </div>
+                <div class="col">
+                  <p class="p12">
+                    Status
+                  </p>
+                  <p class="p12" style="color: red;"><b>Sold</b></p>
+                </div>
+              </div>
+              <br>
+              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
+            </div>
+          </div>
+          <!-- New Description Container -->
+          <div class="description-container">
+            <p>This property offers a modern design with great amenities and a beautiful view.</p>
+            <p>Perfect for families looking for comfort and style!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br />
+  <br />
+  <br />
+  
+  <h2 class="text-center animate-section">Reach out with any questions you have.</h2>
+  <div class="container mt-5 d-flex justify-content-center animate-section">
+    <div class="row align-items-center animate-section">
+      <!-- Image Section -->
+      <div class="col-md-6 d-flex justify-content-center mb-3 animate-section">
+        <div class="contact-image-container animate-section">
+          <img src="https://img.freepik.com/free-photo/medium-shot-woman-working-with-hijab-indoors_23-2150751927.jpg?t=st=1725090984~exp=1725094584~hmac=a7d71cd1a243e5bdcaa1ba9000010fff7c29d86a9cbbf1d76e840acd88de6347&w=360" 
+            alt="Property Image" style="border-radius: 10px; max-width: 100%; height: auto;" />
+        </div>
+      </div>
+      <!-- Form Section -->
+      <div class="col-md-6 d-flex justify-content-center mb-3 animate-section">
+        <div class="contact-form-container animate-section">
+          <form>
+            <div class="form-group">
+              <label for="fullname"></label>
+              <input type="text" class="form-control" id="fullname" placeholder="Enter your full name" style="border-radius: 10px;" required />
+            </div>
+            <div class="form-group">
+              <label for="phone"></label>
+              <input type="text" class="form-control" id="phone" placeholder="Enter your phone number*" style="border-radius: 10px;" required />
+            </div>
+            <div class="form-group">
+              <label for="listingtype"></label>
+              <select class="form-control" id="listingtype" style="border-radius: 10px;" required>
+                <option value="" disabled selected>Select listing type</option>
+                <option>Sell</option>
+                <option>Holiday Homes</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="address"></label>
+              <textarea class="form-control" id="address" rows="3" placeholder="Enter the property address" style="border-radius: 10px;" required></textarea>
+            </div>
+            <button type="submit" class="contact-btn text-white btn btn-primary" style="margin: 5px;">Submit</button>
+            <p class="terms mt-1" style="font-size: 10px; margin-left: 10px;">By clicking submit, you agree to our terms and conditions</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-5 animate-section">
+    <h2 class="title-main text-center mb-4" style="color:  #0a032f;">Explore Our Features</h2>
+    <div class="row justify-content-center">
+      <!-- Property Shot Card 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="property-shot-card bg-light h-100">
+          <div class="image-wrapper">
+            <img src="https://media.istockphoto.com/id/1391413216/photo/rising-prices-for-real-estate.jpg?s=612x612&w=0&k=20&c=1vud3tbKNcXMGB2AVe6b5dSG3DwqMTRk_j55yUIVdSE=" class="img-fluid rounded" alt="PropValue" />
+          </div>
+          <h3 class="text-center">PropValue</h3>
+        </div>
+      </div>
+      <!-- Property Shot Card 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="property-shot-card bg-light h-100">
+          <div class="image-wrapper">
+            <img src="https://www.icicibank.com/content/dam/icicibank/icici-assets/nri-edge/16_sale-of-immovable-property-in-india-by-an-nri.webp" class="img-fluid rounded" alt="Buy VS Rent" />
+          </div>
+          <h3 class="text-center">Sell</h3>
+        </div>
+      </div>
+      <!-- Property Shot Card 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="property-shot-card bg-light h-100">
+          <div class="image-wrapper">
+            <img src="https://st.depositphotos.com/1092019/2637/i/450/depositphotos_26377343-stock-photo-keyboard-with-tips-and-tricks.jpg" class="img-fluid rounded" alt="Tips and Guides" />
+          </div>
+          <h3 class="text-center">Tips and Guides</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5 animate-section">
+    <div class="row">
+      <!-- Left Div for Paragraph Text -->
+      <div class="col-md-6 p-4 text-container justify-content-center  shadow-sm bg-light">
+        <h5 class="text-center justify-content-center" style="font-size: 26px; margin-top: 20px;">Our Happy Customers  :)</h5>
+        <p>Find your perfect property with us! Whether you seek a cozy home, a luxurious estate, or a smart investment, we have a wide selection to meet your needs. Our curated listings cater to every lifestyle and budget, ensuring you'll discover a place to call your own. With expert guidance and personalized service, we make the process smooth and stress-free. Let us help you turn your real estate dreams into realty, whether it's your first home or your next big investment.</p>
+      </div>
+
+      <!-- Right Div for YouTube Video -->
+      <div class="col-md-6 video-container animate-section">
+        <a href="https://youtu.be/M-j_LvEK2ZA?si=Mcnk-gcwuW8Zx7iC" target="_blank"><iframe width="560" height="315" src="https://www.youtube.com/embed/M-j_LvEK2ZA?si=aRoiGd6JA39thuZD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></a>
+      </div>
+    </div>
+  </div>
+
+<section>
+  <div class="container-fluid animate-section">
+<h2 class="text-center" style="color: #0a032f; font-size: 38px; "><b>Associated Builders</b></h2>
+    <div class="col-12">
+      <div class="weprovide-slider">
+        <div class="weprovide-cards-wrapper">
+          <!-- Repeat card structure -->
+          <div class="weprovide-cards">
+            <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/1.gif" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://portfolio.investmentguruindia.com/investmentguruimages/upload/post/2022/04/f5d0441cf653878a25847a1f7289702c.jpg" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://i.pinimg.com/474x/1e/21/cd/1e21cd64ca027a4d2a1516d6f8ea091f.jpg" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/Puravankara_Logo-01.jpg" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/5.gif" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://www.assethomes.in/wp-content/uploads/2022/03/asset-homes.webp" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://careers.malabargroup.com/images/verticals/vertical21.jpg" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://gharinvest.com/wp-content/uploads/2017/11/lodha-500x328.webp" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/1.gif" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://portfolio.investmentguruindia.com/investmentguruimages/upload/post/2022/04/f5d0441cf653878a25847a1f7289702c.jpg" alt="">
+          </div>
+          <div class="weprovide-cards">
+            <img src="https://i.pinimg.com/474x/1e/21/cd/1e21cd64ca027a4d2a1516d6f8ea091f.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="lead text-center" style="font-size: 15px; padding: 30px;">
+      We collaborate with a diverse range of builders, both established brands and local developers. Our builder network system lies in matching clients with properties that align with their specific preferences and investment goals. We help match our customers with homes they’ll love that fit their needs and budget. Dreams Land Realty is proud to collaborate with some of India’s most renowned real estate developers to offer you a diverse range of exceptional properties. By partnering with these industry leaders, we bring you a portfolio of projects that combine architectural excellence, superior craftsmanship, and prime locations, capital appreciation, future developments, etc.
+    </p>
+  </div>
+</section>
+
+  <div class="container mt-5 animate-section">
+    <!-- Section Title -->
+    <h2 class="text-center animate-section" style="color: #0a032f; font-size: 35px; "><b>Testimonials</b></h2>
+    <h4 class="text-center mb-4 animate-section">Our Happy Clients Say About Us</h4>
+
+    <div class="row">
+        <!-- Testimonial 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card testimonial-card p-3 shadow-sm bg-light" style="border: 0;">
+                <div class="d-flex">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7077/7077313.png" alt="John Doe" class="profile-pic me-3" style="height: 70px; width: 70px;">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title">John Doe</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Software Developer</h6>
+                    </div>
+                </div>
+                <p class="card-text mt-3">"This app is truly amazing! It has streamlined our workflow and increased productivity by 50%. The user interface is intuitive and easy to use. Highly recommend!"</p>
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card testimonial-card p-3 shadow-sm bg-light" style="border: 0;">
+                <div class="d-flex">
+                    <img src="https://cdn-icons-png.flaticon.com/512/7077/7077313.png" alt="Jane Smith" class="profile-pic me-3" style="height: 70px; width: 70px;">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Marketing Manager</h6>
+                    </div>
+                </div>
+                <p class="card-text mt-3">"I've tried many apps, but this one stands out. The features are comprehensive, and customer support is excellent."</p>
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card testimonial-card p-3 shadow-sm bg-light" style="border: 0;">
+                <div class="d-flex">
+                    <img src="https://cdn-icons-png.flaticon.com/256/3135/3135789.png" alt="Alice Johnson" class="profile-pic me-3" style="height: 70px; width: 70px;">
+                    <div class="card-body p-0 d-flex flex-column">
+                        <h5 class="card-title">Alice Johnson</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Freelancer</h6>
+                    </div>
+                </div>
+                <p class="card-text mt-3">"Fantastic app! It has all the tools I need in one place, saving me time and effort. The regular updates keep getting better. Kudos to the team!"</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="container mt-2 animate-section">
+  <div class="container-wrapper animate-section">
+    <div class="left-container animate-section">
+      <p11>At Dreams Land Realty, we’re not just in the business of properties; we’re in the business of dreams.</p11>
+      <p11>We combine expertise with a personal touch, treating every client like family.</p11>
+      <p11> Our mission is to be your partner in real estate, leveraging innovation and integrity to secure </p11>
+      <p11> your wealth and turn your property aspirations into realty.</p11>
+      <br>
+      <p12>- <b>Vimal Vidhyadharan</b></p12>
+      <p13>Founder of Dreams Land Realty</p13>
+    </div>
+    <div class="right-container animate-section">
+      <img src="https://dreamslandrealty.com/wp-content/uploads/2024/08/ceo.png" alt="CEO Image">
+    </div>
+  </div>
+</div>  
+
+</body>
+<style>
+/* Original styles */
+.left-container {
+  width: 1100px;
+  height: 260px;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+}
+
+p11 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+p12 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #0a032f;
+}
+
+p13 {
+  font-size: 1.1rem;
+}
+
+.right-container {
+  width: 100px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-container img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  margin-right: 70px;
+}
+
+.container-wrapper {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 578px) {
+  .container-wrapper {
+    flex-direction: column; /* Stack left and right containers vertically */
+    gap: 10px; /* Adjust gap for smaller screens */
+    align-items: center;
+  }
+
+  .left-container {
+    width: 100%; /* Make full width */
+    height: auto; /* Allow height to adjust */
+    padding: 15px; /* Adjust padding */
+  }
+
+  p11 {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  p12, p13 {
+    font-size: 1.1rem; /* Adjust font size for smaller screens */
+  }
+
+  .right-container {
+    width: 100%; /* Make the image container full width */
+    height: auto; /* Allow height to adjust */
+  }
+
+  .right-container img {
+    width: 100%; /* Make the image fill the container's width */
+    height: auto; /* Adjust height to keep the aspect ratio */
+    align-items: center;
+    margin-left: 70px;
+  }
+}
+
+/* HOMEPAGE */
+/* Full-page background image with linear gradient */
+.background-section {
+  position: relative;
+  height: 92vh;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Adding the gradient overlay */
+.background-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://imageio.forbes.com/specials-images/imageserve/61438f13b4b869a506b2efd0/The-Palm-island-panorama-with-Dubai-marina-in-the-background-aerial/960x0.jpg?format=jpg&width=960');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+  /* Ensures the overlay is behind the content */
+}
+
+/* Responsive design for max-width 355px */
+@media (max-width: 355px) {
+  .background-section {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .background-section::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://imageio.forbes.com/specials-images/imageserve/61438f13b4b869a506b2efd0/The-Palm-island-panorama-with-Dubai-marina-in-the-background-aerial/960x0.jpg?format=jpg&width=960');
+    background-size: cover; /* Use contain to fit smaller screens */
+    background-position: center; /* Ensure the image remains centered */
+  }
+}
+
+/* General slider styling */
+.weprovide-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px 0;
+}
+
+.weprovide-cards-wrapper {
+    display: flex;
+    animation: slide-left 30s linear infinite;
+    width: calc(300px * 15); /* Adjust based on the number of cards */
+}
+
+/* Individual card styling */
+.weprovide-cards {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    width: 300px;
+    text-align: center;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.weprovide-cards img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: contain;
+    height: 200px;
+    width: 300px;
+}
+
+.weprovide-cards:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Smooth sliding animation */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Adjust as per the card count */
+    }
+}
+
+</style>
+
+
+{% endblock %}

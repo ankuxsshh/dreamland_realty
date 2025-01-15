@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Property Details - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+  <br />
+  <br />
+  <!-- Property Details Parallax Section -->
+  <div class="property-details-parallax animate-section">
+    <div class="parallax-content text-center text-white animate-section">
+      <h1 class="text-white"></h1>
+      <p class="text-white">Dreams Land Realty:</p>
+      <p class="text-white">Your Trusted Real Estate Partner</p>
+    </div>
+  </div>
+
+  <!-- Property Detail Container Section -->
+  <div class="container my-5 animate-section">
+    <!-- Property Title and Location -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="property-title">2 Bed + Modern Home</h3>
+        <p class="property-location">Near Aalapuzha backwaters</p>
+      </div>
+    </div>
+
+    <div class="row animate-section">
+      <!-- Property Gallery Container Section (Left Column for Main Image and Gallery) -->
+      <div class="col-md-8 animate-section">
+        <!-- Main Property Image -->
+        <img src="https://cdn.properties.emaar.com/wp-content/uploads/2020/06/01_BLOG_BUY_PROPERTY.jpg" class="img-fluid mb-4 main-image" alt="Main Property Image" />
+
+        <!-- Property Gallery Container Section (Image Gallery Grid) -->
+        <div class="row property-gallery-container animate-section">
+          <div class="col-6 col-md-4 gallery-image">
+            <img src="https://www.offplandubai.ae/wp-content/uploads/2017/10/sidra-community.jpg" class="img-fluid img-gallery" alt="Gallery Image 1" />
+          </div>
+          <div class="col-6 col-md-4 gallery-image animate-section">
+            <img src="https://media.licdn.com/dms/image/D4D12AQEtpG_3QbJ5vQ/article-cover_image-shrink_720_1280/0/1690447830277?e=2147483647&v=beta&t=PAcp9b12fLJ00e0CfWzAqo70DqBSfBbCM8DQRhqESVE" class="img-fluid img-gallery" alt="Gallery Image 2" />
+          </div>
+          <div class="col-6 col-md-4 gallery-image animate-section">
+            <img src="https://aeontrisl.com/wp-content/uploads/2020/12/SIDRA_COMMUNITY_.jpg" class="img-fluid img-gallery" alt="Gallery Image 3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Property Information Right Container Section (Right Column for Property Information) -->
+      <div class="col-md-4 animate-section">
+        <div class="property-information-right-container bg-light p-4 animate-section" style="line-height: 35px;">
+          <h2 class="text-primary animate-section">INR 1.07 Cr</h2><p>Onwards</p>
+          <button class="btn btn-warning btn-block mb-3 animate-section" style="width: 100%;">Contact Seller</button>
+          <p>
+            <strong>2 Bed + Modern Home</strong>
+          </p>
+          <p>
+            <strong>Near Aalapuzha backwaters</strong>
+          </p>
+          <p>
+            Property Type : <strong>Residential</strong>
+          </p>
+          <p>
+            Property Subtype : <strong>Villa</strong>
+          </p>
+          <p>
+            Possession Date : <strong>Dec 2028</strong>
+          </p>
+          <p>
+            Carpet Area : <strong>1,133 - 2,251 Sq.ft</strong>
+          </p>
+          <p>
+            Configurations : <strong>3 BHK, 4 BHK</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center justify-content-center animate-section">
+        <h4 class="mb-4 text-left animate-section">Property Description</h4>
+        <p class="text bg-light animate-section" style="line-height: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Welcome to your dream home! This stunning property boasts a sleek, modern design that seamlessly blends comfort and style. With spacious living areas bathed in natural light, it’s perfect for family gatherings and everyday living. Enjoy top-of-the-line amenities, including a gourmet kitchen, luxurious bathrooms, and smart home features that enhance convenience. Step outside to a beautifully landscaped yard, ideal for outdoor activities or relaxing with a book. The breathtaking views provide a serene backdrop, making it a true retreat. This home is not just a place to live; it’s a lifestyle choice for families seeking elegance and comfort.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Property Configuration Details Section Container -->
+  <div class="container my-5 animate-section">
+    <div class="row animate-section">
+      <div class="col-md-12 animate-section">
+        <h4 class="mb-4">Property Configurations & Details</h4>
+        <table class="table table-bordered">
+          <thead class="thead-light">
+            <tr>
+              <th>Configuration</th>
+              <th>Built-up Area</th>
+              <th>Possession Date</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3 BHK</td>
+              <td>1,133 Sq.ft</td>
+              <td>Dec 2028</td>
+              <td>INR 1.07 Cr</td>
+            </tr>
+            <tr>
+              <td>4 BHK</td>
+              <td>2,251 Sq.ft</td>
+              <td>Dec 2028</td>
+              <td>INR 1.98 Cr</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+{% endblock %}
