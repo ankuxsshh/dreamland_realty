@@ -10,23 +10,24 @@
   <!-- Property Details Parallax Section -->
   <div class="property-details-parallax animate-section">
     <div class="parallax-content text-center text-white animate-section">
-      <h1 class="text-white"></h1>
+      <br>
+      <h1 class="text-white">{{ property.property_name}}</h1>
       <p class="text-white">Dreams Land Realty:</p>
       <p class="text-white">Your Trusted Real Estate Partner</p>
     </div>
   </div>
 
   <!-- Property Detail Container Section -->
-  <div class="container my-5 animate-section">
+  <div class="container my-5">
     <!-- Property Title and Location -->
     <div class="row">
       <div class="col-md-12">
-        <h3 class="property-title">2 Bed + Modern Home</h3>
-        <p class="property-location">Near Aalapuzha backwaters</p>
+        <h3 class="property-title animate-section">{{ property.property_name}}</h3>
+        <p class="property-location animate-section">{{ property.property_location}}</p>
       </div>
     </div>
 
-    <div class="row animate-section">
+    <div class="row">
       <!-- Property Gallery Container Section (Left Column for Main Image and Gallery) -->
       <div class="col-md-8 animate-section">
         <!-- Main Property Image -->
@@ -49,68 +50,36 @@
       <!-- Property Information Right Container Section (Right Column for Property Information) -->
       <div class="col-md-4 animate-section">
         <div class="property-information-right-container bg-light p-4 animate-section" style="line-height: 35px;">
-          <h2 class="text-primary animate-section">INR 1.07 Cr</h2><p>Onwards</p>
-          <button class="btn btn-warning btn-block mb-3 animate-section" style="width: 100%;">Contact Seller</button>
+          <h2 class="text-primary animate-section">INR {{ property.formatted_price }}</h2>
+          <button class="btn btn-warning btn-block mb-3 animate-section" style="width: 100%;">Contact now</button>
           <p>
-            <strong>2 Bed + Modern Home</strong>
+            <strong>{{ property.property_name}}</strong>
           </p>
           <p>
-            <strong>Near Aalapuzha backwaters</strong>
+            <strong>{{ property.property_location}}</strong>
           </p>
           <p>
-            Property Type : <strong>Residential</strong>
+            Property Type : <strong>{{ property.property_type }}</strong>
           </p>
           <p>
-            Property Subtype : <strong>Villa</strong>
+            Property Subtype : <strong>{{ property.property_subtype }}</strong>
           </p>
           <p>
-            Possession Date : <strong>Dec 2028</strong>
+            Possession Date : <strong>{{ property.possession_date }}</strong>
           </p>
           <p>
-            Carpet Area : <strong>1,133 - 2,251 Sq.ft</strong>
+            Carpet Area : <strong>{{ property.square_feet}} Sq.ft</strong>
           </p>
           <p>
-            Configurations : <strong>3 BHK, 4 BHK</strong>
+            Configurations : <strong>{{ property.bhk}} BHK</strong>
           </p>
         </div>
       </div>
 
       <div class="text-center justify-content-center animate-section">
         <h4 class="mb-4 text-left animate-section">Property Description</h4>
-        <p class="text bg-light animate-section" style="line-height: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Welcome to your dream home! This stunning property boasts a sleek, modern design that seamlessly blends comfort and style. With spacious living areas bathed in natural light, it’s perfect for family gatherings and everyday living. Enjoy top-of-the-line amenities, including a gourmet kitchen, luxurious bathrooms, and smart home features that enhance convenience. Step outside to a beautifully landscaped yard, ideal for outdoor activities or relaxing with a book. The breathtaking views provide a serene backdrop, making it a true retreat. This home is not just a place to live; it’s a lifestyle choice for families seeking elegance and comfort.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Property Configuration Details Section Container -->
-  <div class="container my-5 animate-section">
-    <div class="row animate-section">
-      <div class="col-md-12 animate-section">
-        <h4 class="mb-4">Property Configurations & Details</h4>
-        <table class="table table-bordered">
-          <thead class="thead-light">
-            <tr>
-              <th>Configuration</th>
-              <th>Built-up Area</th>
-              <th>Possession Date</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>3 BHK</td>
-              <td>1,133 Sq.ft</td>
-              <td>Dec 2028</td>
-              <td>INR 1.07 Cr</td>
-            </tr>
-            <tr>
-              <td>4 BHK</td>
-              <td>2,251 Sq.ft</td>
-              <td>Dec 2028</td>
-              <td>INR 1.98 Cr</td>
-            </tr>
-          </tbody>
-        </table>
+        <br>
+        <p class="text bg-light animate-section" style="line-height: 40px; text-align: justify;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); padding: 20px;">{{ property.property_description}}</p>
       </div>
     </div>
   </div>

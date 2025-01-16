@@ -216,7 +216,7 @@ body {
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 }
 
 .btn-whatsapp-pulse {
@@ -814,13 +814,14 @@ h4 {
 }
 
 .col-md-6 h2 {
-    color: #140859;
+    color: #16223a;
     margin-bottom: 20px;
     padding: 10px;
 }
 
 .col-md-6 p {
-    color: #140859;
+    color: #16223a;
+    text-align: justify;
 }
 
 .animated-heading {
@@ -1017,19 +1018,19 @@ html {
     /* Centers the text horizontally */
     border-radius: 5px;
     /* Optional: makes the corners rounded */
-    color: #140859;
+    color: #16223a;
     margin: 10px;
 }
 
 #bhk-options .btn-group input[type="radio"] {
     display: none;
     /* Hide the default radio buttons */
-    color: #140859;
+    color: #16223a;
     margin: 10px;
 }
 
 #bhk-options .btn-group input[type="radio"]:checked+label {
-    background-color: #140859;
+    background-color: #16223a;
     /* Highlight selected button */
     color: white;
 }
@@ -1042,7 +1043,7 @@ html {
     text-align: center;
     margin: 0;
     margin: 10px;
-    color: #140859;
+    color: #16223a;
 }
 
 #bhk-options {
@@ -1050,7 +1051,7 @@ html {
     gap: 15px;
     /* Space between buttons */
     margin: 10px;
-    color: #140859;
+    color: #16223a;
 }
 
 /* Initial state of the section before animation */
@@ -1098,7 +1099,7 @@ html {
 
 .loader-icon {
     font-size: 3.5rem;
-    color: #140859 !important;
+    color: #16223a !important;
     animation: spin 2s linear infinite;
 }
 
@@ -1111,8 +1112,8 @@ html {
     visibility: hidden;
     /* Hide buttons initially */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 9px;
+    right: 8px;
     z-index: 1051;
 }
 
@@ -1236,7 +1237,7 @@ html {
     }
 
     .parallax-content p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .image-container {
@@ -1316,15 +1317,16 @@ html {
     }
 
     .agents-parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
 /* Section about agents and real estate expertise */
 .agents-info-section .content-text {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .agents-info-section h2 {
@@ -1418,7 +1420,7 @@ html {
     }
 
     .services-parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -1478,6 +1480,8 @@ html {
     font-size: 1rem;
     line-height: 1.8;
     color: #333;
+    text-align: justify;
+    margin: -12px;
 }
 
 /* Infinite Scrolling Slider Section */
@@ -1490,7 +1494,7 @@ html {
 
 .globalreach-bank-slider {
     display: flex;
-    animation: scroll-right-to-left 20s linear infinite;
+    animation: scroll-right-to-left 30s linear infinite;
 }
 
 .globalreach-bank-slide {
@@ -1498,9 +1502,9 @@ html {
 }
 
 .globalreach-bank-slide img {
-    width: 300px;
+    width: 220px;
     /* Adjust the width as needed */
-    height: 200px;
+    height: 110px;
     /* Adjust the height as needed */
     margin: 20px;
     /* Space between images */
@@ -1532,7 +1536,7 @@ html {
     }
 
     .globalreach-parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -1655,7 +1659,7 @@ html {
     }
 
     .legal-team-parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .legal-llb-left-container {
@@ -1701,7 +1705,7 @@ html {
     }
 
     .legal-team-parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -1712,7 +1716,7 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1748,7 +1752,7 @@ html {
 
 /* Property Gallery Container Section */
 .property-gallery-container {
-    margin-top: 30px;
+    margin-top: 8px;
 }
 
 .gallery-image {
@@ -1789,7 +1793,7 @@ html {
     }
 
     .parallax-content p {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -1864,4 +1868,8 @@ html {
     max-height: 100%;
     border-radius: 10px;
     background-color: #ffffff;
+}
+
+.mb-4 {
+    margin-bottom: 0rem !important;
 }

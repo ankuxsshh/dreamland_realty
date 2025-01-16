@@ -433,302 +433,70 @@
   </div>
 </div>
 
-  <div class="container-fluid mt-5">
-    <b><h5 class="text-center animate-section" style="font-size: 32px;">Featured Properties</h5></b>
-    <!-- Row -->
-    <div class="row justify-content-center gx-3 mt-4">
-      <!-- Card 1 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://cms.interiorcompany.com/wp-content/uploads/2023/11/material-used-for-kerala-houses.png" alt="Property 1" />
-          <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: green;"><b>Available</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
-          </div>
-          <!-- New Description Container -->
-          <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
-          </div>
-        </div>
-      </div>
+<div class="container-fluid mt-5">
+  <b>
+    <h5 class="text-center animate-section" style="font-size: 32px;">Featured Properties</h5>
+  </b>
+  <!-- Row -->
+  <div class="row justify-content-center gx-3 mt-4">
+  {% for property in properties %}
+    <div class="col-md-4">
+      <div class="card">
+          <!-- Display property main image -->
+          {% if property.property_main_image %}
+          <img src="{{ property.property_main_image.url }}" alt="{{ property.property_name }}" class="card-img-top" />
+          {% else %}
+          <img src="/static/default-image.jpg" alt="Default Image" class="card-img-top" />
+          {% endif %}
 
-      <!-- Card 2 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://miro.medium.com/v2/resize:fit:1358/0*8CvkvD4qEsxJoYZg" alt="Property 2" />
           <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
+              <h4>{{ property.property_name }}</h4>
+              <p>{{ property.property_location }}</p>
+              <div class="info-row">
+                  <div class="row">
+                      <div class="col">
+                          <p class="p12">
+                              <b>{{ property.bhk }} BHK</b>
+                          </p>
+                          <p class="p12">Configurations</p>
+                      </div>
+                      <div class="col">
+                          <p class="p12">
+                              <b>{{ property.square_feet }}</b>
+                          </p>
+                          <p class="p12">sq.ft</p>
+                      </div>
+                  </div>
+                  <div class="row mt-2">
+                      <div class="col">
+                          <p class="p12">
+                              <b>{{ property.possession_date|date:"F Y" }}</b>
+                          </p>
+                          <p class="p12">Possession</p>
+                      </div>
+                      <div class="col">
+                          <p class="p12">Status</p>
+                          <span style="color: {% if property.is_available %}green{% else %}red{% endif %};">
+                              {{ property.get_property_status_display }}
+                          </span>              
+                      </div>
+                  </div>
+                  <br />
+                  <a href="{% url 'propertydetails' property.id %}" class="btn btn-primary contact-btn">Contact Now</a>
               </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: red;"><b>Sold</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
           </div>
-          <!-- New Description Container -->
-          <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Card 3 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 3" />
-          <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: green;"><b>Available</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
-          </div>
           <!-- New Description Container -->
           <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
+              <p>{{ property.short_description }}</p>
           </div>
-        </div>
       </div>
     </div>
-
-    <!-- Row 2 -->
-    <div class="row justify-content-center gx-3 mt-4">
-      <!-- Card 4 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.konceptdekor.com/wp-content/uploads/2019/10/Conteporary-Home-1024x773.jpg" alt="Property 4" />
-          <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: red;"><b>Sold</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
-          </div>
-          <!-- New Description Container -->
-          <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 5" />
-          <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: green;"><b>Available</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
-          </div>
-          <!-- New Description Container -->
-          <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col-md-4">
-        <div class="card">
-          <img src="https://www.dcastlepmc.com/wp-content/uploads/2023/03/549cd3153157915.632ac177cd905-1-e1677915421866.jpg" alt="Property 6" />
-          <div class="container">
-            <h4>2 Bed + Modern Home</h4>
-            <p>Near Aalapuzha backwaters</p>
-            <div class="info-row">
-              <div class="row">
-                <div class="col">
-                  <p class="p12">
-                    <b>3,4 BHK</b>
-                  </p>
-                  <p class="p12">Configurations</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    <b>1607-2578</b>
-                  </p>
-                  <p class="p12">sq.ft</p>
-                </div>
-              </div>
-              <div class="row mt-2">
-                <div class="col">
-                  <p class="p12">
-                    <b>June 2025</b>
-                  </p>
-                  <p class="p12">Possession</p>
-                </div>
-                <div class="col">
-                  <p class="p12">
-                    Status
-                  </p>
-                  <p class="p12" style="color: red;"><b>Sold</b></p>
-                </div>
-              </div>
-              <br>
-              <a href="{% url 'propertydetails' %}" class="btn btn-primary contact-btn">Contact Now</a>
-            </div>
-          </div>
-          <!-- New Description Container -->
-          <div class="description-container">
-            <p>This property offers a modern design with great amenities and a beautiful view.</p>
-            <p>Perfect for families looking for comfort and style!</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  {% empty %}
+  <p class="text-center">No properties found.</p>
+  {% endfor %}
   </div>
+</div>
   
   <br />
   <br />
@@ -812,7 +580,7 @@
   <div class="container my-5 animate-section">
     <div class="row">
       <!-- Left Div for Paragraph Text -->
-      <div class="col-md-6 p-4 text-container justify-content-center  shadow-sm bg-light">
+      <div class="col-md-6 p-4 text-container justify-content-center justify-text">
         <h5 class="text-center justify-content-center" style="font-size: 26px; margin-top: 20px;">Our Happy Customers  :)</h5>
         <p>Find your perfect property with us! Whether you seek a cozy home, a luxurious estate, or a smart investment, we have a wide selection to meet your needs. Our curated listings cater to every lifestyle and budget, ensuring you'll discover a place to call your own. With expert guidance and personalized service, we make the process smooth and stress-free. Let us help you turn your real estate dreams into realty, whether it's your first home or your next big investment.</p>
       </div>
@@ -827,6 +595,9 @@
 <section>
   <div class="container-fluid animate-section">
 <h2 class="text-center" style="color: #0a032f; font-size: 38px; "><b>Associated Builders</b></h2>
+<p class="lead text-center" style="font-size: 16px; padding: 30px;">
+  We collaborate with a diverse range of builders, both established brands and local developers. Our builder network system lies in matching clients with properties that align with their specific preferences and investment goals. We help match our customers with homes they’ll love that fit their needs and budget. Dreams Land Realty is proud to collaborate with some of India’s most renowned real estate developers to offer you a diverse range of exceptional properties. By partnering with these industry leaders, we bring you a portfolio of projects that combine architectural excellence, superior craftsmanship, and prime locations, capital appreciation, future developments, etc.
+</p>
     <div class="col-12">
       <div class="weprovide-slider">
         <div class="weprovide-cards-wrapper">
@@ -867,9 +638,6 @@
         </div>
       </div>
     </div>
-    <p class="lead text-center" style="font-size: 15px; padding: 30px;">
-      We collaborate with a diverse range of builders, both established brands and local developers. Our builder network system lies in matching clients with properties that align with their specific preferences and investment goals. We help match our customers with homes they’ll love that fit their needs and budget. Dreams Land Realty is proud to collaborate with some of India’s most renowned real estate developers to offer you a diverse range of exceptional properties. By partnering with these industry leaders, we bring you a portfolio of projects that combine architectural excellence, superior craftsmanship, and prime locations, capital appreciation, future developments, etc.
-    </p>
   </div>
 </section>
 
@@ -962,7 +730,7 @@ p11 {
 p12 {
   font-size: 1.1rem;
   margin-bottom: 5px;
-  color: #0a032f;
+  color: #16223a;
 }
 
 p13 {
@@ -1071,8 +839,7 @@ p13 {
     position: relative;
     overflow: hidden;
     width: 100%;
-    background-color: #f9f9f9;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .weprovide-cards-wrapper {
@@ -1084,21 +851,17 @@ p13 {
 /* Individual card styling */
 .weprovide-cards {
     flex: 0 0 auto;
-    margin: 0 10px;
-    width: 300px;
+    margin: 0 20px;
+    width: 200px;
     text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
 .weprovide-cards img {
     width: 100%;
-    border-radius: 8px 8px 0 0;
     object-fit: contain;
-    height: 200px;
-    width: 300px;
+    height: 140px;
+    width: 280px;
 }
 
 .weprovide-cards:hover {

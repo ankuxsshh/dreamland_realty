@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Property Details - Dreams Land Realty
+{% endblock %}
+
+{% block content %}
+  <br />
+  <br />
+  <!-- Property Details Parallax Section -->
+  <div class="property-details-parallax animate-section">
+    <div class="parallax-content text-center text-white animate-section">
+      <h1 class="text-white">{{ property.property_name }}</h1>
+      <p class="text-white">Dreams Land Realty</p>
+      <p class="text-white">Your Trusted Real Estate Partner</p>
+    </div>
+  </div>
+
+  <!-- Property Detail Container Section -->
+  <div class="container my-5 animate-section">
+    <!-- Property Title and Location -->
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="property-title">{{ property.property_name }}</h3>
+        <p class="property-location">{{ property.property_location }}</p>
+      </div>
+    </div>
+
+    <div class="row animate-section">
+      <!-- Property Gallery Container Section (Left Column for Main Image and Gallery) -->
+      <div class="col-md-8 animate-section">
+        <!-- Main Property Image -->
+        <img src="{{ property.property_main_image.url }}" class="img-fluid mb-4 main-image" alt="Main Property Image" />
+
+        <!-- Property Gallery Container Section (Image Gallery Grid) -->
+        <div class="row property-gallery-container animate-section">
+          {% for image in property.gallery_images.all %}
+          <div class="col-6 col-md-4 gallery-image">
+            <img src="{{ image.gallery_images.url }}" class="img-fluid img-gallery" alt="Gallery Image {{ forloop.counter }}" />
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Property Information Right Container Section (Right Column for Property Information) -->
+      <div class="col-md-4 animate-section">
+        <div class="property-information-right-container bg-light p-4 animate-section" style="line-height: 35px;">
+          <h2 class="text-primary animate-section">{{ property.formatted_price }}</h2>
+          <p>Onwards</p>
+          <button class="btn btn-warning btn-block mb-3 animate-section" style="width: 100%;">Contact Seller</button>
+          <p>
+            <strong>{{ property.property_name }}</strong>
+          </p>
+          <p>
+            <strong>{{ property.property_location }}</strong>
+          </p>
+          <p>
+            Property Type : <strong>{{ property.property_type }}</strong>
+          </p>
+          <p>
+            Property Subtype : <strong>{{ property.property_subtype }}</strong>
+          </p>
+          <p>
+            Possession Date : <strong>{{ property.possession_date|date:"F Y" }}</strong>
+          </p>
+          <p>
+            Carpet Area : <strong>{{ property.square_feet }} Sq.ft</strong>
+          </p>
+          <p>
+            Configurations : <strong>{{ property.bhk }} BHK</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center justify-content-center animate-section">
+        <h4 class="mb-4 text-left animate-section">Property Description</h4>
+        <p class="text bg-light animate-section" style="line-height: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">{{ property.property_description }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
