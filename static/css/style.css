@@ -184,7 +184,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: #16223a;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 300;
 }
 
 /* Media query for mobile view */
@@ -304,7 +305,7 @@ body {
 }
 
 .container {
-    padding: 20px;
+    padding: 8px;
     /* Padding inside the card */
     flex-grow: 1;
     /* Allows the container to fill remaining space */
