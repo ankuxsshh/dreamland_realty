@@ -1,7 +1,9 @@
 from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Property
 from datetime import datetime
+from django.http import Http404
+from django.urls import reverse
 
 def index(request):
     # Fetch all properties from the database (or limit the number if needed)
@@ -34,6 +36,7 @@ def globalreach(request):
 def agentsnetwork(request):
     return render(request,'agentsnetwork.html')
 
+# Location dictionary
 LOCATIONS = {
     "abu_dhabi": "Abu Dhabi",
     "sharjah": "Sharjah",
@@ -42,7 +45,6 @@ LOCATIONS = {
     "fujairah": "Fujairah",
     "ajman": "Ajman",
     "ras_al_khaimah": "Ras Al Khaimah",
-
     "trivandrum": "Trivandrum",
     "alappuzha": "Alappuzha",
     "kottayam": "Kottayam",
@@ -50,7 +52,6 @@ LOCATIONS = {
     "thrissur": "Thrissur",
     "kozhikode": "Kozhikode",
     "kannur": "Kannur",
-
     "mumbai": "Mumbai",
     "pune": "Pune",
     "delhi": "Delhi",
@@ -68,9 +69,55 @@ LOCATIONS = {
     "vancouver": "Vancouver",
 }
 
+def search_properties(request):
+    # Get the search query from the GET parameters
+    location_query = request.GET.get('location', '').strip()
+    properties = []
+
+    if location_query:
+        # Filter properties by location name (case-insensitive)
+        properties = Property.objects.filter(property_location__icontains=location_query)
+
+    context = {
+        'location': location_query or "No location specified",
+        'properties': properties,
+        'locations': LOCATIONS,  # Pass locations for dropdown suggestions
+        'message': None if properties else f"No properties found in {location_query}.",
+    }
+
+    # Render the results in the locations.html section
+    return render(request, 'locations.html', context)
+
+
 def location_view(request, location_slug):
+    # Get location name from the LOCATIONS dictionary
     location_name = LOCATIONS.get(location_slug, "Location Not Found")
-    return render(request, 'locations.html', {'location': location_name})
+
+    # If location not found, show a message
+    if location_name == "Location Not Found":
+        return render(request, 'locations.html', {
+            'location': location_name,
+            'properties': [],
+            'message': 'Location Not Found.',
+        })
+
+    # Get properties for the location
+    properties = Property.objects.filter(property_location__icontains=location_name)
+
+    # If no properties exist for the location, show a message
+    if not properties.exists():
+        return render(request, 'locations.html', {
+            'location': location_name,
+            'properties': [],
+            'message': f"No properties are available in {location_name}.",
+        })
+
+    # Render the properties in the locations.html section
+    return render(request, 'locations.html', {
+        'location': location_name,
+        'properties': properties,
+        'message': None,
+    })
 
 def add_property(request):
     if request.method == 'POST':

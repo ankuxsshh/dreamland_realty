@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-  Dreams Land Realty
+  Dreams Land Realty - Your Dream Property Awaits You
 {% endblock %}
 
 {% block content %}
@@ -14,21 +14,45 @@
       <h1 class="h3-heading text-white" style="font-size: 40px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);"><b>Welcome to DREAMS LAND REALTY</b></h1>
       <p class="p-heading text-white" style="font-size: 22px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);"><b>Your dream property awaits you</b></p>      
   
-      <!-- Search Bar Section -->
-      <div class="container mt-4 animate-section">
-        <div class="search-bar d-flex justify-content-center">
-          <div class="input-group align-items-stretch">
-            <button class="btn btn-primary location-btn animate-section" type="button" style=" border-radius: 5px;">
-              <i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i>
-            </button>
-            <input type="text" class="form-control animate-section" placeholder="Search properties..." aria-label="Search properties" />
-            <button class="btn btn-primary bars-btn animate-section" type="button" style="border-radius: 5px;">
-              <i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i>
-            </button>
-            <button class="contact-btn btn btn-primary animate-section" type="button" style=" border-radius: 5px; height: 60px">Find Property</button>
-          </div>
-        </div> 
-      </div>   
+<!-- Search Bar Section -->
+<div class="container mt-4 animate-section">
+  <form method="GET" action="{% url 'search_properties' %}">
+    <div class="search-bar d-flex justify-content-center">
+      <div class="input-group align-items-stretch">
+        <button class="btn btn-primary location-btn animate-section" type="button" style="border-radius: 5px;">
+          <i class="fas fa-map-marker-alt" style="font-size: 22px; border-radius: 5px;"></i>
+        </button>
+        <!-- Autocomplete input field -->
+        <input 
+          type="text" 
+          id="locationSearch" 
+          name="location" 
+          class="form-control animate-section" 
+          placeholder="Search properties..." 
+          aria-label="Search properties" 
+          list="locationList" 
+          autocomplete="off"
+        />
+        <datalist id="locationList">
+          {% for key, value in locations.items %}
+            <option value="{{ value }}"></option>
+          {% endfor %}
+        </datalist>
+        <button class="btn btn-primary bars-btn animate-section" type="button" style="border-radius: 5px;">
+          <i class="fa fa-bars" style="font-size: 22px; border-radius: 5px;"></i>
+        </button>
+        <button 
+          type="submit" 
+          class="contact-btn btn btn-primary animate-section" 
+          style="border-radius: 5px; height: 60px;"
+        >
+          Find Property
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+   
     </div> 
   </div>
 
@@ -383,26 +407,25 @@
         <!-- BHK Options -->
         <div class="form-group mb-4" id="bhk-options" style="display: flex; gap: 10px;">
           <label>BHK</label>
-        <br>
-        <div class="btn-group" role="group">
-          <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-1">1</label>
+          <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-1">1</label>
 
-          <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-2">2</label>
+            <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-2">2</label>
 
-          <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-3">3</label>
+            <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-3">3</label>
 
-          <input type="radio" class="btn-check" name="bhk" id="bhk-4" value="4" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-4">4</label>
+            <input type="radio" class="btn-check" name="bhk" id="bhk-4" value="4" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-4">4</label>
 
-          <input type="radio" class="btn-check" name="bhk" id="bhk-5" value="5" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-5">5</label>
+            <input type="radio" class="btn-check" name="bhk" id="bhk-5" value="5" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-5">5</label>
 
-          <input type="radio" class="btn-check" name="bhk" id="bhk-5+" value="5+" autocomplete="off">
-          <label class="btn btn-outline-primary" for="bhk-5+">5+</label>
-        </div>
+            <input type="radio" class="btn-check" name="bhk" id="bhk-5+" value="5+" autocomplete="off">
+            <label class="btn btn-outline-primary" for="bhk-5+">5+</label>
+          </div>
         </div>
 
         <!-- Status Dropdown -->
