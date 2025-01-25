@@ -7,40 +7,61 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0011_alter_property_possession_date'),
+        ("dreamland_app", "0011_alter_property_possession_date"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='property',
-            name='property_images',
+            model_name="property",
+            name="property_images",
         ),
         migrations.AddField(
-            model_name='property',
-            name='main_image',
-            field=models.ImageField(blank=True, null=True, upload_to='properties/images/main/'),
+            model_name="property",
+            name="main_image",
+            field=models.ImageField(
+                blank=True, null=True, upload_to="properties/images/main/"
+            ),
         ),
         migrations.AddField(
-            model_name='property',
-            name='price',
-            field=models.DecimalField(blank=True, decimal_places=2, max_digits=10, null=True),
+            model_name="property",
+            name="price",
+            field=models.DecimalField(
+                blank=True, decimal_places=2, max_digits=10, null=True
+            ),
         ),
         migrations.AlterField(
-            model_name='property',
-            name='property_subtype',
+            model_name="property",
+            name="property_subtype",
             field=models.CharField(max_length=255),
         ),
         migrations.CreateModel(
-            name='PropertyImage',
+            name="PropertyImage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='properties/images/gallery/')),
-                ('property', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='property_images', to='dreamland_app.property')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="properties/images/gallery/")),
+                (
+                    "property",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="property_images",
+                        to="dreamland_app.property",
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='property',
-            name='gallery_images',
-            field=models.ManyToManyField(blank=True, related_name='properties', to='dreamland_app.propertyimage'),
+            model_name="property",
+            name="gallery_images",
+            field=models.ManyToManyField(
+                blank=True, related_name="properties", to="dreamland_app.propertyimage"
+            ),
         ),
     ]

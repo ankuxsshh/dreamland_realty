@@ -7,13 +7,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0010_property_short_description_and_more'),
+        ("dreamland_app", "0010_property_short_description_and_more"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='property',
-            name='possession_date',
+            model_name="property",
+            name="possession_date",
             field=models.DateField(default=datetime.date.today),
         ),
     ]

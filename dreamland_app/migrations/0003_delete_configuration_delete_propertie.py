@@ -6,14 +6,14 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0002_alter_configuration_built_up_area_and_more'),
+        ("dreamland_app", "0002_alter_configuration_built_up_area_and_more"),
     ]
 
     operations = [
         migrations.DeleteModel(
-            name='Configuration',
+            name="Configuration",
         ),
         migrations.DeleteModel(
-            name='Propertie',
+            name="Propertie",
         ),
     ]

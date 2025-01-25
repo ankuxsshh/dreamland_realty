@@ -6,43 +6,64 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0006_initial'),
+        ("dreamland_app", "0006_initial"),
     ]
 
     operations = [
         migrations.RenameField(
-            model_name='property',
-            old_name='beds',
-            new_name='bedrooms',
+            model_name="property",
+            old_name="beds",
+            new_name="bedrooms",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='description',
-            new_name='property_description',
+            model_name="property",
+            old_name="description",
+            new_name="property_description",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='images',
-            new_name='property_images',
+            model_name="property",
+            old_name="images",
+            new_name="property_images",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='location',
-            new_name='property_location',
+            model_name="property",
+            old_name="location",
+            new_name="property_location",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='name',
-            new_name='property_name',
+            model_name="property",
+            old_name="name",
+            new_name="property_name",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='status',
-            new_name='property_status',
+            model_name="property",
+            old_name="status",
+            new_name="property_status",
         ),
         migrations.AlterField(
-            model_name='property',
-            name='property_subtype',
-            field=models.CharField(choices=[('residential', [('villas', 'Villas'), ('apartments', 'Apartments'), ('independent_houses', 'Independent Houses')]), ('commercial', [('office', 'Office'), ('industries', 'Industries'), ('shopping_complexes', 'Shopping Complexes')]), ('agriculture', [('land', 'Land'), ('farm_houses', 'Farm Houses')])], max_length=255),
+            model_name="property",
+            name="property_subtype",
+            field=models.CharField(
+                choices=[
+                    (
+                        "residential",
+                        [
+                            ("villas", "Villas"),
+                            ("apartments", "Apartments"),
+                            ("independent_houses", "Independent Houses"),
+                        ],
+                    ),
+                    (
+                        "commercial",
+                        [
+                            ("office", "Office"),
+                            ("industries", "Industries"),
+                            ("shopping_complexes", "Shopping Complexes"),
+                        ],
+                    ),
+                    ("agriculture", [("land", "Land"), ("farm_houses", "Farm Houses")]),
+                ],
+                max_length=255,
+            ),
         ),
     ]

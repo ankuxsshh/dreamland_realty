@@ -8,37 +8,72 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Propertie',
+            name="Propertie",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('property_title', models.CharField(max_length=200)),
-                ('property_location', models.CharField(max_length=255)),
-                ('main_image', models.ImageField(upload_to='property_images/')),
-                ('gallery_images', models.JSONField()),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('possession_date', models.DateField()),
-                ('carpet_area_min', models.IntegerField()),
-                ('carpet_area_max', models.IntegerField()),
-                ('min_price_per_sqft', models.DecimalField(decimal_places=2, max_digits=7)),
-                ('configurations', models.CharField(max_length=255)),
-                ('property_type', models.CharField(choices=[('residential', 'Residential'), ('commercial', 'Commercial'), ('agriculture', 'Agriculture')], max_length=50)),
-                ('subtypes', models.JSONField()),
-                ('description', models.TextField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("property_title", models.CharField(max_length=200)),
+                ("property_location", models.CharField(max_length=255)),
+                ("main_image", models.ImageField(upload_to="property_images/")),
+                ("gallery_images", models.JSONField()),
+                ("price", models.DecimalField(decimal_places=2, max_digits=10)),
+                ("possession_date", models.DateField()),
+                ("carpet_area_min", models.IntegerField()),
+                ("carpet_area_max", models.IntegerField()),
+                (
+                    "min_price_per_sqft",
+                    models.DecimalField(decimal_places=2, max_digits=7),
+                ),
+                ("configurations", models.CharField(max_length=255)),
+                (
+                    "property_type",
+                    models.CharField(
+                        choices=[
+                            ("residential", "Residential"),
+                            ("commercial", "Commercial"),
+                            ("agriculture", "Agriculture"),
+                        ],
+                        max_length=50,
+                    ),
+                ),
+                ("subtypes", models.JSONField()),
+                ("description", models.TextField()),
             ],
         ),
         migrations.CreateModel(
-            name='Configuration',
+            name="Configuration",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('config_type', models.CharField(max_length=50)),
-                ('built_up_area', models.IntegerField()),
-                ('price', models.DecimalField(decimal_places=2, max_digits=10)),
-                ('propertie', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='configs', to='dreamland_app.propertie')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("config_type", models.CharField(max_length=50)),
+                ("built_up_area", models.IntegerField()),
+                ("price", models.DecimalField(decimal_places=2, max_digits=10)),
+                (
+                    "propertie",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="configs",
+                        to="dreamland_app.propertie",
+                    ),
+                ),
             ],
         ),
     ]

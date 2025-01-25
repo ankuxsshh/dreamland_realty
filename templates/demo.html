@@ -35,9 +35,9 @@
         <!-- Property Gallery Container Section (Image Gallery Grid) -->
         <div class="row property-gallery-container animate-section">
           {% for image in property.gallery_images.all %}
-          <div class="col-6 col-md-4 gallery-image">
-            <img src="{{ image.gallery_images.url }}" class="img-fluid img-gallery" alt="Gallery Image {{ forloop.counter }}" />
-          </div>
+            <div class="col-6 col-md-4 gallery-image">
+              <img src="{{ image.gallery_images.url }}" class="img-fluid img-gallery" alt="Gallery Image {{ forloop.counter }}" />
+            </div>
           {% endfor %}
         </div>
       </div>
@@ -61,7 +61,7 @@
             Property Subtype : <strong>{{ property.property_subtype }}</strong>
           </p>
           <p>
-            Possession Date : <strong>{{ property.possession_date|date:"F Y" }}</strong>
+            Possession Date : <strong>{{ property.possession_date|date:'F Y' }}</strong>
           </p>
           <p>
             Carpet Area : <strong>{{ property.square_feet }} Sq.ft</strong>

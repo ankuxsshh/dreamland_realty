@@ -2,5 +2,5 @@ from django.apps import AppConfig
 
 
 class RealAppConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'dreamland_app'
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "dreamland_app"

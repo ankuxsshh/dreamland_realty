@@ -6,23 +6,38 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0009_alter_property_property_subtype_delete_configuration'),
+        ("dreamland_app", "0009_alter_property_property_subtype_delete_configuration"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='property',
-            name='short_description',
+            model_name="property",
+            name="short_description",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AlterField(
-            model_name='property',
-            name='property_subtype',
-            field=models.CharField(choices=[('villas', 'Villas'), ('apartments', 'Apartments'), ('independent_houses', 'Independent Houses'), ('residential_land', 'Residential Land'), ('office', 'Office'), ('industries', 'Industries'), ('shopping_complexes', 'Shopping Complexes'), ('farm_houses', 'Farm Houses')], max_length=255),
+            model_name="property",
+            name="property_subtype",
+            field=models.CharField(
+                choices=[
+                    ("villas", "Villas"),
+                    ("apartments", "Apartments"),
+                    ("independent_houses", "Independent Houses"),
+                    ("residential_land", "Residential Land"),
+                    ("office", "Office"),
+                    ("industries", "Industries"),
+                    ("shopping_complexes", "Shopping Complexes"),
+                    ("farm_houses", "Farm Houses"),
+                ],
+                max_length=255,
+            ),
         ),
         migrations.AlterField(
-            model_name='property',
-            name='property_type',
-            field=models.CharField(choices=[('residential', 'Residential'), ('commercial', 'Commercial')], max_length=50),
+            model_name="property",
+            name="property_type",
+            field=models.CharField(
+                choices=[("residential", "Residential"), ("commercial", "Commercial")],
+                max_length=50,
+            ),
         ),
     ]

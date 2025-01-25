@@ -6,25 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0016_propertyimage_and_more'),
+        ("dreamland_app", "0016_propertyimage_and_more"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='property',
-            name='gallery_images',
+            model_name="property",
+            name="gallery_images",
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='property_main_images',
-            new_name='property_main_image',
+            model_name="property",
+            old_name="property_main_images",
+            new_name="property_main_image",
         ),
         migrations.DeleteModel(
-            name='PropertyImage',
+            name="PropertyImage",
         ),
         migrations.AddField(
-            model_name='property',
-            name='gallery_images',
-            field=models.ImageField(blank=True, null=True, upload_to='properties/images/gallery/'),
+            model_name="property",
+            name="gallery_images",
+            field=models.ImageField(
+                blank=True, null=True, upload_to="properties/images/gallery/"
+            ),
         ),
     ]

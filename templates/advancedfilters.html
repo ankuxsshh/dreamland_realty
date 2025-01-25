@@ -1,0 +1,106 @@
+<!-- Main Filter Container -->
+<div class="overlay filter-overlay">
+  <div class="filter-container">
+    <h3 class="section-heading">Advanced Filters</h3>
+
+    <!-- Country Selection Section -->
+    <div class="d-flex justify-content-left mb-3">
+      <button class="btn btn-country" style="background-color: #16223a; color: white; margin: 10px;" id="btn-dubai">U A E</button>
+      <button class="btn btn-country" style="background-color: #16223a; color: white; margin: 10px;" id="btn-india">I N D I A</button>
+    </div>
+
+    <!-- Filter Form -->
+    <form id="filter-form">
+      <!-- Dynamic Location Search -->
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location" placeholder="Search by location..." />
+      </div>
+
+      <!-- Property Type Section -->
+      <div class="form-group">
+        <label for="property-type">Property Type</label>
+        <select class="form-control" id="property-type">
+          <option value="" disabled selected>Select Property Type</option>
+        </select>
+      </div>
+
+      <!-- Property Subtype Section -->
+      <div class="form-group" id="property-subtypes" style="display: none;">
+        <label>Property Subtype</label>
+        <select class="form-control" id="property-subtype"></select>
+      </div>
+
+      <!-- Conditional Filters -->
+      <div id="conditional-filters" style="display: none;">
+        <!-- Price Range Slider -->
+        <div class="form-group">
+          <label for="price-range">Price Range</label>
+          <div class="d-flex justify-content-between">
+            <input type="range" class="form-range" id="min-price" min="0" max="10000000" step="10000" value="0" />
+            <input type="range" class="form-range" id="max-price" min="0" max="10000000" step="10000" value="10000000" />
+          </div>
+          <p class="text-muted" id="price-display">0 - 10,000,000</p>
+        </div>
+
+        <!-- Square Footage Slider -->
+        <div class="form-group" id="sqft-range" style="display: none;">
+          <label for="sqft-range">Square Feet</label>
+          <div class="d-flex justify-content-between">
+            <input type="range" class="form-range" id="min-sqft" min="500" max="5000" step="100" value="500" />
+            <input type="range" class="form-range" id="max-sqft" min="500" max="5000" step="100" value="5000" />
+          </div>
+          <p class="text-muted" id="sqft-display">500 - 5000 sqft</p>
+        </div>
+
+        <!-- BHK Options -->
+        <div class="form-group mb-4" id="bhk-options" style="display: flex; gap: 10px;">
+          <label>BHK</label>
+          <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" name="bhk" id="bhk-1" value="1" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-1">1</label>
+
+            <input type="radio" class="btn-check" name="bhk" id="bhk-2" value="2" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-2">2</label>
+
+            <input type="radio" class="btn-check" name="bhk" id="bhk-3" value="3" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-3">3</label>
+
+            <input type="radio" class="btn-check" name="bhk" id="bhk-4" value="4" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-4">4</label>
+
+            <input type="radio" class="btn-check" name="bhk" id="bhk-5" value="5" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-5">5</label>
+
+            <input type="radio" class="btn-check" name="bhk" id="bhk-5+" value="5+" autocomplete="off" />
+            <label class="btn btn-outline-primary" for="bhk-5+">5+</label>
+          </div>
+        </div>
+
+        <!-- Status Dropdown -->
+        <div class="form-group">
+          <label for="property-status">Status</label>
+          <select class="form-control" id="property-status">
+            <option value="available">Available</option>
+            <option value="sold">Sold</option>
+          </select>
+        </div>
+
+        <!-- Sort By Section -->
+        <div class="form-group">
+          <label for="sort-by">Sort By</label>
+          <select class="form-control" id="sort-by">
+            <option value="new-constructions">New Constructions</option>
+            <option value="under-constructions">Under Constructions</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Apply Filters Section -->
+      <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-primary">Apply Filters</button>
+        <button type="button" class="btn btn-secondary" id="clear-filter">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -7,13 +7,20 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0012_remove_property_property_images_property_main_image_and_more'),
+        (
+            "dreamland_app",
+            "0012_remove_property_property_images_property_main_image_and_more",
+        ),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='propertyimage',
-            name='property',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='images', to='dreamland_app.property'),
+            model_name="propertyimage",
+            name="property",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="images",
+                to="dreamland_app.property",
+            ),
         ),
     ]

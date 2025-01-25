@@ -6,31 +6,46 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0015_remove_property_gallery_images_and_more'),
+        ("dreamland_app", "0015_remove_property_gallery_images_and_more"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='PropertyImage',
+            name="PropertyImage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='properties/images/gallery/')),
-                ('description', models.CharField(blank=True, max_length=255, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="properties/images/gallery/")),
+                (
+                    "description",
+                    models.CharField(blank=True, max_length=255, null=True),
+                ),
             ],
         ),
         migrations.RenameField(
-            model_name='property',
-            old_name='property_images',
-            new_name='property_main_images',
+            model_name="property",
+            old_name="property_images",
+            new_name="property_main_images",
         ),
         migrations.AddField(
-            model_name='property',
-            name='price',
-            field=models.DecimalField(blank=True, decimal_places=2, max_digits=10, null=True),
+            model_name="property",
+            name="price",
+            field=models.DecimalField(
+                blank=True, decimal_places=2, max_digits=10, null=True
+            ),
         ),
         migrations.AddField(
-            model_name='property',
-            name='gallery_images',
-            field=models.ManyToManyField(blank=True, related_name='properties', to='dreamland_app.propertyimage'),
+            model_name="property",
+            name="gallery_images",
+            field=models.ManyToManyField(
+                blank=True, related_name="properties", to="dreamland_app.propertyimage"
+            ),
         ),
     ]

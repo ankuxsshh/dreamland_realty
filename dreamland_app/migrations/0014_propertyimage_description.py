@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('dreamland_app', '0013_alter_propertyimage_property'),
+        ("dreamland_app", "0013_alter_propertyimage_property"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='propertyimage',
-            name='description',
+            model_name="propertyimage",
+            name="description",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]
